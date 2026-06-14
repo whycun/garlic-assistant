@@ -2,6 +2,7 @@ package com.whycun.garlicapp.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -26,22 +27,12 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
     val newsItems by vm.newsData.collectAsState()
     val isLoading by vm.isLoading.collectAsState()
     val isStale by vm.isStale.collectAsState()
-    var isRefreshing by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
-    val pullState = rememberPullToRefreshState()
 
-    if (pullState.isRefreshing) {
-        LaunchedEffect(true) {
-            vm.refreshData()
-            pullState.endRefresh()
-        }
-    }
-
-    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(bottom = 8.dp)
-        ) {
+    LazyColumn(
+        modifier = Modifier.fillMaxSize().background(Background),
+        contentPadding = PaddingValues(bottom = 8.dp)
+    ) {
             // 预警横幅
             val warnings = newsItems.filter { it.tagType == "warning" }
             if (warnings.isNotEmpty()) {
@@ -58,8 +49,12 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
             item {
                 Row(Modifier.fillMaxWidth().padding(12.dp, 12.dp, 12.dp, 4.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("📰 行情资讯", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                    Text(if (isStale) "(已缓存)" else if (!isLoading) "· 已更新" else "更新中...",
-                        fontSize = 11.sp, color = if (isStale) Orange else if (!isLoading) GreenLight else TextMuted)
+                    Text(
+                    if (isLoading) "更新中..." else "🔄 刷新",
+                    fontSize = 11.sp,
+                    color = if (isLoading) TextMuted else Green,
+                    modifier = Modifier.clickable { scope.launch { vm.refreshData() } }
+                )
                 }
             }
 
@@ -85,11 +80,6 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
                 }
             }
         }
-
-        PullToRefreshContainer(
-            state = pullState,
-            modifier = Modifier.align(Alignment.TopCenter)
-        )
     }
 }
 

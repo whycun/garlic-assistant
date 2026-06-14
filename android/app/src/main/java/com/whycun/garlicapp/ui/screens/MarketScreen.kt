@@ -39,14 +39,8 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
     var selectedPeriod by remember { mutableStateOf("daily") }
     var selectedSpec by remember { mutableStateOf("") }
     val scope = rememberCoroutineScope()
-    val pullState = rememberPullToRefreshState()
 
-    if (pullState.isRefreshing) {
-        LaunchedEffect(true) { vm.refreshData(); pullState.endRefresh() }
-    }
-
-    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
-    LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
+    LazyColumn(modifier = Modifier.fillMaxSize().background(Background), contentPadding = PaddingValues(bottom = 8.dp)) {
         // 走势图卡片
         item {
             Surface(modifier = Modifier.fillMaxWidth().padding(10.dp, 10.dp, 10.dp, 0.dp), color = Surface, shape = RoundedCornerShape(10.dp), shadowElevation = 1.dp) {
@@ -54,7 +48,8 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                         Text("📈 ${REGIONS[selectedRegion]} · ${selectedSpec.ifEmpty { "均价" }}走势",
                             fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                        Text(if(isStale) "(缓存)" else "·已更新", fontSize = 10.sp, color = if(isStale) Orange else GreenLight)
+                        Text("🔄 刷新", fontSize = 10.sp, color = Green,
+                            modifier = Modifier.clickable { scope.launch { vm.refreshData() } })
                     }
 
                     // 产区标签
@@ -179,8 +174,7 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
         }
     }
 
-        PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
-    } // Box end
+    }
 }
 
 @Composable
