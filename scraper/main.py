@@ -70,18 +70,29 @@ def run():
     price_results_success = [r for r in price_tasks if r['success']]
     if price_results_success:
         prices_data, price_news = merge_prices(price_tasks)
-        save_json(prices_data, 'prices.json')
+        # 验证数据有效性：必须有至少一个产区
+        if prices_data.get('regions') and len(prices_data['regions']) > 0:
+            save_json(prices_data, 'prices.json')
+            logger.info(f'价格数据有效，已保存 ({len(prices_data["regions"])}个产区)')
+        else:
+            logger.warning('价格数据为空（regions为空），保留现有数据文件不变')
         # 把价格爬虫里附带的新闻也加入新闻列表
-        extra_news = {'success': True, 'data': price_news}
-        news_tasks.append(extra_news)
+        if price_news:
+            extra_news = {'success': True, 'data': price_news}
+            news_tasks.append(extra_news)
     else:
         logger.error('所有价格爬虫均失败，保留现有数据文件不变')
 
     # 合并新闻数据
     news_results_success = [r for r in news_tasks if r['success']]
     if news_results_success:
-        news_data = merge_news(news_tasks)
-        save_json(news_data, 'news.json')
+        merged_news = merge_news(news_tasks)
+        # 验证数据有效性：必须有至少1条新闻
+        if merged_news and merged_news.get('items') and len(merged_news['items']) > 0:
+            save_json(merged_news, 'news.json')
+            logger.info(f'新闻数据有效，已保存 ({len(merged_news[\"items\"])}条)')
+        else:
+            logger.warning('新闻数据为空，保留现有数据文件不变')
     else:
         logger.warning('所有新闻爬虫均失败，保留现有数据文件不变')
 

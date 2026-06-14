@@ -30,12 +30,25 @@ fun InventoryScreen(vm: MainViewModel = viewModel()) {
     val allBatches by vm.allBatches.collectAsState()
     val priceData by vm.priceData.collectAsState()
 
+    val tabTitles = listOf("📋 库存清单", "🧮 利润计算")
+
     Column(modifier = Modifier.fillMaxSize().background(Background)) {
-        // Tab切换
-        Surface(color = Surface, shadowElevation = 1.dp) {
-            Row(Modifier.fillMaxWidth()) {
-                TabBtn("📋 库存清单", 0, activeTab) { activeTab = it }
-                TabBtn("🧮 利润计算", 1, activeTab) { activeTab = it }
+        TabRow(
+            selectedTabIndex = activeTab,
+            containerColor = Surface,
+            contentColor = Green,
+            divider = { HorizontalDivider(thickness = 0.5.dp, color = Divider) }
+        ) {
+            tabTitles.forEachIndexed { index, title ->
+                Tab(
+                    selected = activeTab == index,
+                    onClick = { activeTab = index },
+                    text = {
+                        Text(title, fontSize = 13.sp,
+                            fontWeight = if (activeTab == index) FontWeight.Bold else FontWeight.Normal,
+                            color = if (activeTab == index) Green else TextMuted)
+                    }
+                )
             }
         }
 
@@ -44,24 +57,6 @@ fun InventoryScreen(vm: MainViewModel = viewModel()) {
         } else {
             CalculatorContent(vm)
         }
-    }
-}
-
-@Composable
-private fun RowScope.TabBtn(text: String, idx: Int, active: Int, onClick: (Int) -> Unit) {
-    TextButton(
-        onClick = { onClick(idx) },
-        modifier = Modifier.weight(1f),
-        colors = ButtonDefaults.textButtonColors(
-            contentColor = if (idx == active) Green else TextMuted
-        )
-    ) {
-        Text(text, fontWeight = if (idx == active) FontWeight.Bold else FontWeight.Normal,
-            fontSize = 12.sp)
-    }
-    if (idx == active) {
-        HorizontalDivider(modifier = Modifier.padding(horizontal = 24.dp),
-            thickness = 2.dp, color = Green)
     }
 }
 
