@@ -13,6 +13,6 @@ class GarlicApp : Application() {
         super.onCreate()
         val db = AppDatabase.getInstance(this)
         val api = GarlicApi.create()
-        repository = GarlicRepository(db, api)
+        repository = GarlicRepository(db, api, this)
     }
 }

@@ -28,7 +28,7 @@ import com.whycun.garlicapp.ui.theme.*
 import com.whycun.garlicapp.viewmodel.MainViewModel
 
 val REGIONS = mapOf("jinxiang" to "金乡","qixian" to "杞县","pizhou" to "邳州","zhongmou" to "中牟")
-val PERIODS = listOf("日线" to "daily", "月线" to "monthly", "年线" to "yearly")
+val PERIODS = listOf("日线" to "daily", "月线" to "monthly")
 
 @Composable
 fun MarketScreen(vm: MainViewModel = viewModel()) {
