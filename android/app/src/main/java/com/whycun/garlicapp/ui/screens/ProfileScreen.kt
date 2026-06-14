@@ -102,10 +102,6 @@ fun ProfileScreen(vm: MainViewModel = viewModel()) {
                     SettingRow("👤 编辑个人信息", "$nickname · $location") { showProfileDialog = true }
                     SettingRow("📊 默认产区", defaultRegion) { showRegionDialog = true }
                     SettingRow("🔔 价格预警阈值", "涨跌 ${alertThreshold}% 提醒") { showAlertDialog = true }
-                    SettingRow("📋 导出交易台账", "CSV格式") {
-                        exportCsv(all, nickname)
-                    }
-                    SettingRow("💾 数据备份", "JSON格式") { /* backup */ }
                     SettingRow("ℹ️ 关于蒜来宝", "v1.0") { showAboutDialog = true }
                 }
             }

@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
-    <!-- 蒜头主体 -->
-    <path
-        android:fillColor="#F5F5F5"
-        android:pathData="M34,40 C30,38 24,38 22,45 C20,52 20,62 24,70 C28,78 36,82 44,82 C48,82 52,80 54,76 L54,76 C56,72 58,64 58,54 C58,48 56,42 54,38 C52,35 46,34 40,36 C36,37 34,39 34,40 Z"/>
-    <!-- 蒜瓣纹理 -->
-    <path
-        android:fillColor="#E0E0E0"
-        android:strokeColor="#DDDDDD"
-        android:strokeWidth="0.5"
-        android:pathData="M32,52 Q38,48 44,52 M30,60 Q38,56 46,60 M32,68 Q38,65 44,68"/>
-    <!-- 蒜头顶部茎 -->
-    <path
-        android:fillColor="#81C784"
-        android:pathData="M38,38 C38,32 36,26 34,20 C40,24 44,26 46,20 C46,26 48,30 48,36 C46,38 42,39 38,38 Z"/>
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- 蒜头主体 - 扁圆形 -->
+    <path android:fillColor="#FFF8EE"
+        android:pathData="M20,42 C18,36 24,28 34,28 C40,28 44,30 48,28 C52,26 56,28 56,32
+        C56,36 58,44 56,52 C54,60 48,68 40,72 C32,76 24,72 22,64 C20,56 20,48 20,42 Z"/>
+    <!-- 左蒜瓣 -->
+    <path android:fillColor="#FFFDF5"
+        android:pathData="M18,44 C16,38 22,32 32,32 C34,40 32,50 28,58 C24,66 18,60 18,52 Z"/>
+    <!-- 右蒜瓣 -->
+    <path android:fillColor="#FFFDF5"
+        android:pathData="M46,32 C54,30 58,34 58,40 C58,50 54,60 48,66 C46,58 46,50 46,40 Z"/>
+    <!-- 中心蒜瓣纹理 -->
+    <path android:fillColor="#F0E8D8"
+        android:pathData="M32,34 C30,40 30,52 34,62 C36,52 35,42 36,34 Z"/>
+    <path android:fillColor="#F0E8D8"
+        android:pathData="M38,34 C38,44 36,54 34,62 C38,54 40,44 40,34 Z"/>
+    <!-- 茎部 -->
+    <path android:fillColor="#A8C8A0"
+        android:pathData="M34,26 C34,18 32,12 30,6 C34,8 36,8 40,6 C40,12 40,18 40,26 C38,28 36,28 34,26 Z"/>
     <!-- 根须 -->
-    <path
-        android:fillColor="#E8E8E8"
-        android:strokeColor="#DDDDDD"
-        android:strokeWidth="0.8"
-        android:pathData="M26,76 L22,84 M32,80 L30,88 M38,82 L38,90 M44,80 L46,88 M50,76 L54,84"/>
-    <!-- 蒜头底部 -->
-    <path
-        android:fillColor="#EEEEEE"
-        android:pathData="M28,72 C30,78 36,80 40,80 C44,80 48,78 48,72 C44,76 36,76 28,72 Z"/>
+    <path android:fillColor="#E8DDD0" android:strokeColor="#DDD0C0" android:strokeWidth="0.5"
+        android:pathData="M24,68 L20,78 M28,72 L26,80 M34,74 L34,82 M40,72 L42,80 M48,68 L52,78"/>
+    <!-- 蒜瓣分隔线 -->
+    <path android:fillColor="#00000000" android:strokeColor="#E0D5C5" android:strokeWidth="0.8"
+        android:pathData="M24,44 Q30,38 36,44 M22,54 Q30,48 38,54 M44,48 Q48,44 52,48 M46,56 Q50,52 54,56"/>
 </vector>
