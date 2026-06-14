@@ -1,248 +1,57 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-06-14T19:12:23.014909+08:00",
+  "updated_at": "2026-06-14T18:00:00+08:00",
   "status": "ok",
-  "regions": {},
+  "regions": {
+    "jinxiang": {"name":"金乡","market_mood":"购销两旺","specs":[
+      {"name":"蒜米料","low":1.60,"high":1.70,"unit":"元/斤","trend":"stable"},
+      {"name":"印尼货","low":1.80,"high":1.93,"unit":"元/斤","trend":"up"},
+      {"name":"一般混级","low":2.00,"high":2.12,"unit":"元/斤","trend":"up"},
+      {"name":"中大混级","low":2.12,"high":2.32,"unit":"元/斤","trend":"stable"},
+      {"name":"太空大混级","low":2.40,"high":2.60,"unit":"元/斤","trend":"stable"}
+    ]},
+    "qixian": {"name":"杞县","market_mood":"稳中偏弱","specs":[
+      {"name":"脱水蒜","low":1.20,"high":1.32,"unit":"元/斤","trend":"down"},
+      {"name":"蒜米料","low":1.42,"high":1.73,"unit":"元/斤","trend":"down"},
+      {"name":"印尼货","low":1.75,"high":2.00,"unit":"元/斤","trend":"down"},
+      {"name":"一般混级","low":1.65,"high":1.80,"unit":"元/斤","trend":"stable"},
+      {"name":"大混级","low":2.00,"high":2.30,"unit":"元/斤","trend":"stable"}
+    ]},
+    "pizhou": {"name":"邳州","market_mood":"净蒜偏硬","specs":[
+      {"name":"原皮蒜米料","low":1.30,"high":1.50,"unit":"元/斤","trend":"stable"},
+      {"name":"原皮印尼货","low":1.70,"high":1.90,"unit":"元/斤","trend":"stable"},
+      {"name":"5.5cm净蒜","low":2.50,"high":2.80,"unit":"元/斤","trend":"up"},
+      {"name":"6.0cm净蒜","low":3.30,"high":3.50,"unit":"元/斤","trend":"up"},
+      {"name":"6.5cm净蒜","low":3.90,"high":4.30,"unit":"元/斤","trend":"up"}
+    ]},
+    "zhongmou": {"name":"中牟","market_mood":"平稳","specs":[
+      {"name":"蒜米料","low":1.55,"high":1.65,"unit":"元/斤","trend":"stable"},
+      {"name":"一般混级","low":1.90,"high":2.05,"unit":"元/斤","trend":"stable"}
+    ]}
+  },
   "history": [
-    {
-      "date": "2026-05-15",
-      "jinxiang_avg": 1.85,
-      "qixian_avg": 1.62,
-      "pizhou_avg": 3.05,
-      "zhongmou_avg": 1.7
-    },
-    {
-      "date": "2026-05-16",
-      "jinxiang_avg": 1.83,
-      "qixian_avg": 1.63,
-      "pizhou_avg": 3.02,
-      "zhongmou_avg": 1.68
-    },
-    {
-      "date": "2026-05-17",
-      "jinxiang_avg": 1.88,
-      "qixian_avg": 1.65,
-      "pizhou_avg": 3.08,
-      "zhongmou_avg": 1.72
-    },
-    {
-      "date": "2026-05-18",
-      "jinxiang_avg": 1.92,
-      "qixian_avg": 1.67,
-      "pizhou_avg": 3.1,
-      "zhongmou_avg": 1.75
-    },
-    {
-      "date": "2026-05-19",
-      "jinxiang_avg": 1.95,
-      "qixian_avg": 1.7,
-      "pizhou_avg": 3.12,
-      "zhongmou_avg": 1.78
-    },
-    {
-      "date": "2026-05-20",
-      "jinxiang_avg": 1.93,
-      "qixian_avg": 1.68,
-      "pizhou_avg": 3.08,
-      "zhongmou_avg": 1.76
-    },
-    {
-      "date": "2026-05-21",
-      "jinxiang_avg": 1.9,
-      "qixian_avg": 1.65,
-      "pizhou_avg": 3.05,
-      "zhongmou_avg": 1.74
-    },
-    {
-      "date": "2026-05-22",
-      "jinxiang_avg": 1.94,
-      "qixian_avg": 1.69,
-      "pizhou_avg": 3.11,
-      "zhongmou_avg": 1.77
-    },
-    {
-      "date": "2026-05-23",
-      "jinxiang_avg": 1.98,
-      "qixian_avg": 1.72,
-      "pizhou_avg": 3.14,
-      "zhongmou_avg": 1.8
-    },
-    {
-      "date": "2026-05-24",
-      "jinxiang_avg": 2.02,
-      "qixian_avg": 1.74,
-      "pizhou_avg": 3.18,
-      "zhongmou_avg": 1.82
-    },
-    {
-      "date": "2026-05-25",
-      "jinxiang_avg": 2.0,
-      "qixian_avg": 1.73,
-      "pizhou_avg": 3.2,
-      "zhongmou_avg": 1.81
-    },
-    {
-      "date": "2026-05-26",
-      "jinxiang_avg": 2.05,
-      "qixian_avg": 1.76,
-      "pizhou_avg": 3.22,
-      "zhongmou_avg": 1.84
-    },
-    {
-      "date": "2026-05-27",
-      "jinxiang_avg": 2.08,
-      "qixian_avg": 1.78,
-      "pizhou_avg": 3.25,
-      "zhongmou_avg": 1.86
-    },
-    {
-      "date": "2026-05-28",
-      "jinxiang_avg": 2.1,
-      "qixian_avg": 1.8,
-      "pizhou_avg": 3.28,
-      "zhongmou_avg": 1.88
-    },
-    {
-      "date": "2026-05-29",
-      "jinxiang_avg": 2.07,
-      "qixian_avg": 1.79,
-      "pizhou_avg": 3.3,
-      "zhongmou_avg": 1.87
-    },
-    {
-      "date": "2026-05-30",
-      "jinxiang_avg": 2.12,
-      "qixian_avg": 1.81,
-      "pizhou_avg": 3.35,
-      "zhongmou_avg": 1.89
-    },
-    {
-      "date": "2026-05-31",
-      "jinxiang_avg": 2.1,
-      "qixian_avg": 1.8,
-      "pizhou_avg": 3.33,
-      "zhongmou_avg": 1.88
-    },
-    {
-      "date": "2026-06-01",
-      "jinxiang_avg": 2.08,
-      "qixian_avg": 1.78,
-      "pizhou_avg": 3.3,
-      "zhongmou_avg": 1.86
-    },
-    {
-      "date": "2026-06-02",
-      "jinxiang_avg": 2.05,
-      "qixian_avg": 1.76,
-      "pizhou_avg": 3.28,
-      "zhongmou_avg": 1.85
-    },
-    {
-      "date": "2026-06-03",
-      "jinxiang_avg": 2.03,
-      "qixian_avg": 1.75,
-      "pizhou_avg": 3.25,
-      "zhongmou_avg": 1.83
-    },
-    {
-      "date": "2026-06-04",
-      "jinxiang_avg": 2.06,
-      "qixian_avg": 1.77,
-      "pizhou_avg": 3.3,
-      "zhongmou_avg": 1.85
-    },
-    {
-      "date": "2026-06-05",
-      "jinxiang_avg": 2.09,
-      "qixian_avg": 1.79,
-      "pizhou_avg": 3.35,
-      "zhongmou_avg": 1.87
-    },
-    {
-      "date": "2026-06-06",
-      "jinxiang_avg": 2.11,
-      "qixian_avg": 1.8,
-      "pizhou_avg": 3.38,
-      "zhongmou_avg": 1.88
-    },
-    {
-      "date": "2026-06-07",
-      "jinxiang_avg": 2.13,
-      "qixian_avg": 1.81,
-      "pizhou_avg": 3.4,
-      "zhongmou_avg": 1.89
-    },
-    {
-      "date": "2026-06-08",
-      "jinxiang_avg": 2.12,
-      "qixian_avg": 1.8,
-      "pizhou_avg": 3.42,
-      "zhongmou_avg": 1.88
-    },
-    {
-      "date": "2026-06-09",
-      "jinxiang_avg": 2.1,
-      "qixian_avg": 1.79,
-      "pizhou_avg": 3.4,
-      "zhongmou_avg": 1.87
-    },
-    {
-      "date": "2026-06-10",
-      "jinxiang_avg": 2.08,
-      "qixian_avg": 1.78,
-      "pizhou_avg": 3.38,
-      "zhongmou_avg": 1.86
-    },
-    {
-      "date": "2026-06-11",
-      "jinxiang_avg": 2.05,
-      "qixian_avg": 1.77,
-      "pizhou_avg": 3.35,
-      "zhongmou_avg": 1.85
-    },
-    {
-      "date": "2026-06-12",
-      "jinxiang_avg": 2.07,
-      "qixian_avg": 1.78,
-      "pizhou_avg": 3.42,
-      "zhongmou_avg": 1.86
-    },
-    {
-      "date": "2026-06-13",
-      "jinxiang_avg": 2.09,
-      "qixian_avg": 1.79,
-      "pizhou_avg": 3.48,
-      "zhongmou_avg": 1.87
-    },
-    {
-      "date": "2026-06-14"
-    }
+    {"date":"2026-05-15","jinxiang_avg":1.85,"qixian_avg":1.62,"pizhou_avg":3.05,"zhongmou_avg":1.70},
+    {"date":"2026-05-17","jinxiang_avg":1.88,"qixian_avg":1.65,"pizhou_avg":3.08,"zhongmou_avg":1.72},
+    {"date":"2026-05-19","jinxiang_avg":1.95,"qixian_avg":1.70,"pizhou_avg":3.12,"zhongmou_avg":1.78},
+    {"date":"2026-05-21","jinxiang_avg":1.90,"qixian_avg":1.65,"pizhou_avg":3.05,"zhongmou_avg":1.74},
+    {"date":"2026-05-23","jinxiang_avg":1.98,"qixian_avg":1.72,"pizhou_avg":3.14,"zhongmou_avg":1.80},
+    {"date":"2026-05-25","jinxiang_avg":2.00,"qixian_avg":1.73,"pizhou_avg":3.20,"zhongmou_avg":1.81},
+    {"date":"2026-05-27","jinxiang_avg":2.08,"qixian_avg":1.78,"pizhou_avg":3.25,"zhongmou_avg":1.86},
+    {"date":"2026-05-29","jinxiang_avg":2.07,"qixian_avg":1.79,"pizhou_avg":3.30,"zhongmou_avg":1.87},
+    {"date":"2026-05-31","jinxiang_avg":2.10,"qixian_avg":1.80,"pizhou_avg":3.33,"zhongmou_avg":1.88},
+    {"date":"2026-06-02","jinxiang_avg":2.05,"qixian_avg":1.76,"pizhou_avg":3.28,"zhongmou_avg":1.85},
+    {"date":"2026-06-04","jinxiang_avg":2.06,"qixian_avg":1.77,"pizhou_avg":3.30,"zhongmou_avg":1.85},
+    {"date":"2026-06-06","jinxiang_avg":2.11,"qixian_avg":1.80,"pizhou_avg":3.38,"zhongmou_avg":1.88},
+    {"date":"2026-06-08","jinxiang_avg":2.12,"qixian_avg":1.80,"pizhou_avg":3.42,"zhongmou_avg":1.88},
+    {"date":"2026-06-10","jinxiang_avg":2.08,"qixian_avg":1.78,"pizhou_avg":3.38,"zhongmou_avg":1.86},
+    {"date":"2026-06-12","jinxiang_avg":2.07,"qixian_avg":1.78,"pizhou_avg":3.42,"zhongmou_avg":1.86},
+    {"date":"2026-06-14","jinxiang_avg":2.10,"qixian_avg":1.80,"pizhou_avg":3.50,"zhongmou_avg":1.88}
   ],
   "factors": {
-    "national_inventory": {
-      "label": "全国库存量",
-      "value": "349万吨",
-      "level": "high"
-    },
-    "planting_area": {
-      "label": "种植面积",
-      "value": "1,200万亩 (+1.0%)",
-      "level": "neutral"
-    },
-    "export_forecast": {
-      "label": "出口量预期",
-      "value": "340万吨 (+6.6%)",
-      "level": "positive"
-    },
-    "weather_risk": {
-      "label": "天气风险",
-      "value": "晚播冻害关注中",
-      "level": "high"
-    },
-    "seed_cost": {
-      "label": "蒜种成本",
-      "value": "3.5-4.3元/斤",
-      "level": "down"
-    }
+    "national_inventory":{"label":"全国库存量","value":"349万吨","level":"high"},
+    "planting_area":{"label":"种植面积","value":"1,200万亩 (+1.0%)","level":"neutral"},
+    "export_forecast":{"label":"出口量预期","value":"340万吨 (+6.6%)","level":"positive"},
+    "weather_risk":{"label":"天气风险","value":"晚播冻害关注中","level":"high"},
+    "seed_cost":{"label":"蒜种成本","value":"3.5-4.3元/斤","level":"down"}
   }
 }

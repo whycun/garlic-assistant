@@ -10,6 +10,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -46,7 +47,7 @@ fun InventoryScreen(vm: MainViewModel = viewModel()) {
 }
 
 @Composable
-private fun TabBtn(text: String, idx: Int, active: Int, onClick: (Int) -> Unit) {
+private fun RowScope.TabBtn(text: String, idx: Int, active: Int, onClick: (Int) -> Unit) {
     TextButton(
         onClick = { onClick(idx) },
         modifier = Modifier.weight(1f),
@@ -161,7 +162,7 @@ fun BatchListContent(
 }
 
 @Composable
-fun SummaryCell(label: String, value: String, bg: androidx.compose.ui.graphics.Color, vColor: androidx.compose.ui.graphics.Color, modifier: Modifier) {
+fun SummaryCell(label: String, value: String, bg: Color, vColor: Color, modifier: Modifier) {
     Surface(modifier = modifier, color = bg, shape = RoundedCornerShape(8.dp)) {
         Column(modifier = Modifier.padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(label, fontSize = 10.sp, color = TextMuted)
@@ -222,12 +223,14 @@ fun BatchCard(batch: Batch, marketPrice: Double, pnl: Double,
 @Composable
 fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
     var batchNo by remember { mutableStateOf("") }
-    var region by remember { mutableStateOf("jinxiang") }
+    var selectedRegion by remember { mutableStateOf("金乡") }
     var spec by remember { mutableStateOf("") }
     var tons by remember { mutableStateOf("") }
     var price by remember { mutableStateOf("") }
     var date by remember { mutableStateOf(java.time.LocalDate.now().toString()) }
     var location by remember { mutableStateOf("") }
+    var dropdownExpanded by remember { mutableStateOf(false) }
+    val regionMap = mapOf("金乡" to "jinxiang", "杞县" to "qixian", "邳州" to "pizhou", "中牟" to "zhongmou")
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -238,7 +241,16 @@ fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
                 item { Spacer(Modifier.height(8.dp)) }
                 item {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        OutlinedTextField(region, { region = it }, label = { Text("产区") }, modifier = Modifier.weight(1f))
+                        Box(Modifier.weight(1f)) {
+                            OutlinedTextField(selectedRegion, {}, label = { Text("产区") }, readOnly = true, modifier = Modifier.fillMaxWidth())
+                            DropdownMenu(expanded = dropdownExpanded, onDismissRequest = { dropdownExpanded = false }) {
+                                regionMap.keys.forEach { name ->
+                                    DropdownMenuItem(text = { Text(name) }, onClick = { selectedRegion = name; dropdownExpanded = false })
+                                }
+                            }
+                            // Invisible click area
+                            Box(Modifier.fillMaxWidth().height(56.dp).clickable { dropdownExpanded = true })
+                        }
                         OutlinedTextField(spec, { spec = it }, label = { Text("规格") }, modifier = Modifier.weight(1f))
                     }
                 }
@@ -259,15 +271,14 @@ fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
         },
         confirmButton = {
             Button(onClick = {
+                val regionKey = regionMap[selectedRegion] ?: "jinxiang"
                 val b = Batch(
-                    id = "batch_${Instant.now().toEpochMilli()}",
-                    batchNo = batchNo, region = region,
-                    regionName = REGIONS[region] ?: region, spec = spec,
+                    id = "batch_${Instant.now().toEpochMilli()}", batchNo = batchNo,
+                    region = regionKey, regionName = selectedRegion, spec = spec,
                     quantityTons = tons.toDoubleOrNull() ?: 0.0,
                     purchasePricePerJin = price.toDoubleOrNull() ?: 0.0,
                     purchaseDate = date, storageLocation = location,
-                    status = "holding", createdAt = Instant.now().toString(),
-                    updatedAt = Instant.now().toString()
+                    status = "holding", createdAt = Instant.now().toString(), updatedAt = Instant.now().toString()
                 )
                 onSave(b)
             }, colors = ButtonDefaults.buttonColors(containerColor = Green)) { Text("保存") }
@@ -278,17 +289,41 @@ fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
 
 @Composable
 fun SellDialog(id: String, onDismiss: () -> Unit, onConfirm: (Double, String) -> Unit) {
-    var price by remember { mutableStateOf("") }
+    var sellPrice by remember { mutableStateOf("") }
+    var sellTons by remember { mutableStateOf("") }
+    var laborFee by remember { mutableStateOf("") }
+    var transportFee by remember { mutableStateOf("") }
+    var otherFee by remember { mutableStateOf("") }
+
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("标记出库") },
+        title = { Text("标记出库", fontWeight = FontWeight.Bold) },
         text = {
-            OutlinedTextField(price, { price = it }, label = { Text("卖出价格(元/斤)") },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal))
+            LazyColumn {
+                item {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        OutlinedTextField(sellPrice, { sellPrice = it }, label = { Text("出货价(元/斤)") },
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal), modifier = Modifier.weight(1f))
+                        OutlinedTextField(sellTons, { sellTons = it }, label = { Text("出货吨数") },
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal), modifier = Modifier.weight(1f))
+                    }
+                }
+                item { Spacer(Modifier.height(8.dp)) }
+                item { Text("额外费用 (从利润中扣除)", fontSize = 12.sp, color = TextMuted, fontWeight = FontWeight.Bold) }
+                item { Spacer(Modifier.height(4.dp)) }
+                item { OutlinedTextField(laborFee, { laborFee = it }, label = { Text("👷 人工费(元)") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number), modifier = Modifier.fillMaxWidth()) }
+                item { Spacer(Modifier.height(6.dp)) }
+                item { OutlinedTextField(transportFee, { transportFee = it }, label = { Text("🚛 运输费(元)") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number), modifier = Modifier.fillMaxWidth()) }
+                item { Spacer(Modifier.height(6.dp)) }
+                item { OutlinedTextField(otherFee, { otherFee = it }, label = { Text("📋 其他费用(元)") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number), modifier = Modifier.fillMaxWidth()) }
+            }
         },
         confirmButton = {
             Button(onClick = {
-                val p = price.toDoubleOrNull() ?: return@Button
+                val p = sellPrice.toDoubleOrNull() ?: return@Button
                 onConfirm(p, java.time.LocalDate.now().toString())
             }, colors = ButtonDefaults.buttonColors(containerColor = Green)) { Text("确认") }
         },

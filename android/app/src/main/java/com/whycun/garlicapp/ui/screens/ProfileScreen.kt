@@ -10,10 +10,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.whycun.garlicapp.ui.theme.Green
+import com.whycun.garlicapp.ui.theme.Red
 import com.whycun.garlicapp.ui.theme.*
 import com.whycun.garlicapp.viewmodel.MainViewModel
 
