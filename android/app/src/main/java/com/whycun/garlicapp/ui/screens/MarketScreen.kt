@@ -38,17 +38,14 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
     val isStale by vm.isStale.collectAsState()
     var selectedPeriod by remember { mutableStateOf("daily") }
     var selectedSpec by remember { mutableStateOf("") }
-    var isRefreshing by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
+    val pullState = rememberPullToRefreshState()
 
-    PullToRefreshBox(
-        isRefreshing = isRefreshing,
-        onRefresh = {
-            isRefreshing = true
-            scope.launch { vm.refreshData(); isRefreshing = false }
-        },
-        modifier = Modifier.fillMaxSize().background(Background)
-    ) {
+    if (pullState.isRefreshing) {
+        LaunchedEffect(true) { vm.refreshData(); pullState.endRefresh() }
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
     LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
         // 走势图卡片
         item {
@@ -181,7 +178,10 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
             }
         }
     }
-    } // PullToRefreshBox end
+    } // LazyColumn end
+
+        PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
+    } // Box end
 }
 
 @Composable

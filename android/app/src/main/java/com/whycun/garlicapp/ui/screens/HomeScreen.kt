@@ -20,6 +20,7 @@ import com.whycun.garlicapp.ui.theme.*
 import com.whycun.garlicapp.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(vm: MainViewModel = viewModel()) {
     val newsItems by vm.newsData.collectAsState()
@@ -27,18 +28,16 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
     val isStale by vm.isStale.collectAsState()
     var isRefreshing by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
+    val pullState = rememberPullToRefreshState()
 
-    PullToRefreshBox(
-        isRefreshing = isRefreshing,
-        onRefresh = {
-            isRefreshing = true
-            scope.launch {
-                vm.refreshData()
-                isRefreshing = false
-            }
-        },
-        modifier = Modifier.fillMaxSize().background(Background)
-    ) {
+    if (pullState.isRefreshing) {
+        LaunchedEffect(true) {
+            vm.refreshData()
+            pullState.endRefresh()
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(bottom = 8.dp)
@@ -86,6 +85,11 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
                 }
             }
         }
+
+        PullToRefreshContainer(
+            state = pullState,
+            modifier = Modifier.align(Alignment.TopCenter)
+        )
     }
 }
 
