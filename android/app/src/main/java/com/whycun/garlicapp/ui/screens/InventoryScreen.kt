@@ -73,7 +73,11 @@ fun BatchListContent(
     val totalTons = holding.sumOf { it.quantityTons }
     val totalCost = holding.sumOf { it.quantityTons * it.purchasePricePerJin * 2000 }
     val totalValue = holding.sumOf { b ->
-        val mkt = regions?.get(b.region)?.specs?.firstOrNull()?.low ?: b.purchasePricePerJin
+        val regionData = regions?.get(b.region)
+        // 按具体规格查找市价，找不到则用产区均价
+        val specData = regionData?.specs?.find { it.name == b.spec }
+        val mkt = if (specData != null) (specData.low + specData.high) / 2
+                  else regionData?.specs?.firstOrNull()?.low ?: b.purchasePricePerJin
         b.quantityTons * mkt * 2000
     }
     val floatingPnL = totalValue - totalCost
@@ -101,7 +105,11 @@ fun BatchListContent(
         }
 
         items(holding) { batch ->
-            val mkt = regions?.get(batch.region)?.specs?.firstOrNull()?.low ?: batch.purchasePricePerJin
+            // 按具体规格查当前市价
+            val regionData = regions?.get(batch.region)
+            val specData = regionData?.specs?.find { it.name == batch.spec }
+            val mkt = if (specData != null) (specData.low + specData.high) / 2
+                      else regionData?.specs?.firstOrNull()?.low ?: batch.purchasePricePerJin
             val pnl = batch.quantityTons * (mkt - batch.purchasePricePerJin) * 2000
             BatchCard(batch, mkt, pnl,
                 onSell = { showSellDialog = batch.id },
@@ -140,12 +148,16 @@ fun BatchListContent(
         }
     }
 
-    // 新增弹窗
+    // 新增弹窗（传入真实产区规格数据）
     if (showAddDialog) {
-        AddBatchDialog(onDismiss = { showAddDialog = false }) { batch ->
-            vm.saveBatch(batch)
-            showAddDialog = false
-        }
+        AddBatchDialog(
+            regions = regions,
+            onDismiss = { showAddDialog = false },
+            onSave = { batch ->
+                vm.saveBatch(batch)
+                showAddDialog = false
+            }
+        )
     }
 
     // 出库弹窗
@@ -217,16 +229,32 @@ fun BatchCard(batch: Batch, marketPrice: Double, pnl: Double,
 }
 
 @Composable
-fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
+fun AddBatchDialog(
+    regions: Map<String, com.whycun.garlicapp.data.remote.RegionData>?,
+    onDismiss: () -> Unit,
+    onSave: (Batch) -> Unit
+) {
+    val regionNames = listOf("金乡", "杞县", "邳州", "中牟")
+    val regionKeyMap = mapOf("金乡" to "jinxiang", "杞县" to "qixian", "邳州" to "pizhou", "中牟" to "zhongmou")
+
     var batchNo by remember { mutableStateOf("") }
-    var selectedRegion by remember { mutableStateOf("金乡") }
-    var spec by remember { mutableStateOf("") }
+    var selectedRegionName by remember { mutableStateOf("金乡") }
+    var selectedSpec by remember { mutableStateOf("") }
     var tons by remember { mutableStateOf("") }
     var price by remember { mutableStateOf("") }
     var date by remember { mutableStateOf(java.time.LocalDate.now().toString()) }
     var location by remember { mutableStateOf("") }
-    var dropdownExpanded by remember { mutableStateOf(false) }
-    val regionMap = mapOf("金乡" to "jinxiang", "杞县" to "qixian", "邳州" to "pizhou", "中牟" to "zhongmou")
+    var regionDropdown by remember { mutableStateOf(false) }
+    var specDropdown by remember { mutableStateOf(false) }
+
+    // 当前选中产区的规格列表
+    val currentRegionKey = regionKeyMap[selectedRegionName] ?: "jinxiang"
+    val currentRegion = regions?.get(currentRegionKey)
+    val availableSpecs = currentRegion?.specs?.map { it.name } ?: emptyList()
+
+    // 选中规格的当前市价
+    val selectedSpecData = currentRegion?.specs?.find { it.name == selectedSpec }
+    val currentMarketPrice = if (selectedSpecData != null) (selectedSpecData.low + selectedSpecData.high) / 2 else 0.0
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -235,22 +263,54 @@ fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
             LazyColumn {
                 item { OutlinedTextField(batchNo, { batchNo = it }, label = { Text("批次编号") }, modifier = Modifier.fillMaxWidth()) }
                 item { Spacer(Modifier.height(8.dp)) }
+
+                // 产区选择（下拉）
                 item {
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Box(Modifier.weight(1f)) {
-                            OutlinedTextField(selectedRegion, {}, label = { Text("产区") }, readOnly = true, modifier = Modifier.fillMaxWidth())
-                            DropdownMenu(expanded = dropdownExpanded, onDismissRequest = { dropdownExpanded = false }) {
-                                regionMap.keys.forEach { name ->
-                                    DropdownMenuItem(text = { Text(name) }, onClick = { selectedRegion = name; dropdownExpanded = false })
-                                }
-                            }
-                            // Invisible click area
-                            Box(Modifier.fillMaxWidth().height(56.dp).clickable { dropdownExpanded = true })
+                    Box {
+                        OutlinedTextField(selectedRegionName, {}, label = { Text("产区") }, readOnly = true, modifier = Modifier.fillMaxWidth())
+                        DropdownMenu(expanded = regionDropdown, onDismissRequest = { regionDropdown = false }) {
+                            regionNames.forEach { name -> DropdownMenuItem(text = { Text(name) }, onClick = { selectedRegionName = name; selectedSpec = ""; regionDropdown = false }) }
                         }
-                        OutlinedTextField(spec, { spec = it }, label = { Text("规格") }, modifier = Modifier.weight(1f))
+                        Box(Modifier.fillMaxWidth().height(56.dp).clickable { regionDropdown = true })
                     }
                 }
                 item { Spacer(Modifier.height(8.dp)) }
+
+                // 规格选择（根据产区联动）
+                item {
+                    Box {
+                        OutlinedTextField(
+                            value = if (selectedSpec.isEmpty()) "请选择规格" else "$selectedSpec (市价≈${"%.2f".format(currentMarketPrice)}元/斤)",
+                            onValueChange = {},
+                            label = { Text("规格") },
+                            readOnly = true,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        DropdownMenu(expanded = specDropdown, onDismissRequest = { specDropdown = false }) {
+                            availableSpecs.forEach { spec ->
+                                val specData = currentRegion?.specs?.find { it.name == spec }
+                                val mktPrice = if (specData != null) (specData.low + specData.high) / 2 else 0.0
+                                DropdownMenuItem(
+                                    text = { Text("$spec  (≈${"%.2f".format(mktPrice)}元/斤)") },
+                                    onClick = { selectedSpec = spec; specDropdown = false }
+                                )
+                            }
+                        }
+                        Box(Modifier.fillMaxWidth().height(56.dp).clickable { specDropdown = true })
+                    }
+                }
+                item { Spacer(Modifier.height(8.dp)) }
+
+                // 当前市价提示
+                if (selectedSpec.isNotEmpty()) {
+                    item {
+                        Text("📊 当前市价: ${"%.2f".format(currentMarketPrice)}元/斤",
+                            fontSize = 13.sp, color = Green, fontWeight = FontWeight.Bold)
+                    }
+                    item { Spacer(Modifier.height(4.dp)) }
+                }
+
+                // 数量和收购价
                 item {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         OutlinedTextField(tons, { tons = it }, label = { Text("数量(吨)") },
@@ -267,10 +327,9 @@ fun AddBatchDialog(onDismiss: () -> Unit, onSave: (Batch) -> Unit) {
         },
         confirmButton = {
             Button(onClick = {
-                val regionKey = regionMap[selectedRegion] ?: "jinxiang"
                 val b = Batch(
                     id = "batch_${Instant.now().toEpochMilli()}", batchNo = batchNo,
-                    region = regionKey, regionName = selectedRegion, spec = spec,
+                    region = currentRegionKey, regionName = selectedRegionName, spec = selectedSpec,
                     quantityTons = tons.toDoubleOrNull() ?: 0.0,
                     purchasePricePerJin = price.toDoubleOrNull() ?: 0.0,
                     purchaseDate = date, storageLocation = location,
