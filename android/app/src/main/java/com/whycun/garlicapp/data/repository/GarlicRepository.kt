@@ -14,6 +14,16 @@ import java.io.InputStreamReader
 
 class GarlicRepository(private val db: AppDatabase, private val api: GarlicApi, private val context: Context) {
 
+    // ===== 快速加载本地assets（不经过网络） =====
+
+    fun loadPricesFromAssetsSync(): PriceResponse? = runCatching {
+        Gson().fromJson(readAsset("prices.json"), PriceResponse::class.java)
+    }.getOrNull()
+
+    fun loadNewsFromAssetsSync(): NewsResponse? = runCatching {
+        Gson().fromJson(readAsset("news.json"), NewsResponse::class.java)
+    }.getOrNull()
+
     // ===== 远程数据（网络优先 + 本地assets兜底） =====
 
     suspend fun fetchPrices(): Result<PriceResponse> = runCatching {

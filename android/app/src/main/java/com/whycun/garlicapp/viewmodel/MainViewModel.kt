@@ -44,28 +44,18 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     val selectedRegion: StateFlow<String> = _selectedRegion
 
     init {
-        // 先秒加载本地assets数据
-        viewModelScope.launch {
-            repo.fetchPrices().onSuccess { _priceData.value = it }
-            repo.fetchNews().onSuccess { _newsData.value = it.items }
-        }
-        // 后台尝试网络刷新
-        refreshFromNetwork()
-    }
+        // 0ms：秒加载assets（不触发网络，立刻显示）
+        repo.loadPricesFromAssetsSync()?.let { _priceData.value = it }
+        repo.loadNewsFromAssetsSync()?.let { _newsData.value = it.items }
 
-    private fun refreshFromNetwork() {
+        // 后台静默网络刷新
         viewModelScope.launch {
             try {
                 repo.fetchPrices().onSuccess {
-                    if (it.regions.isNotEmpty()) {
-                        _priceData.value = it
-                        _isStale.value = false
-                    }
+                    if (it.regions.isNotEmpty()) { _priceData.value = it; _isStale.value = false }
                 }
                 repo.fetchNews().onSuccess {
-                    if (it.items.isNotEmpty()) {
-                        _newsData.value = it.items
-                    }
+                    if (it.items.isNotEmpty()) { _newsData.value = it.items }
                 }
             } catch (_: Exception) {}
         }
