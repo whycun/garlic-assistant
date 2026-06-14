@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.pullrefresh.PullRefreshIndicator
 import androidx.compose.material.pullrefresh.pullRefresh
 import androidx.compose.material.pullrefresh.rememberPullRefreshState
@@ -35,6 +36,7 @@ import com.whycun.garlicapp.viewmodel.MainViewModel
 val REGIONS = mapOf("jinxiang" to "金乡","qixian" to "杞县","pizhou" to "邳州","zhongmou" to "中牟")
 val PERIODS = listOf("日线" to "daily", "月线" to "monthly")
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun MarketScreen(vm: MainViewModel = viewModel()) {
     val priceData by vm.priceData.collectAsState()
