@@ -139,6 +139,64 @@ def scrape_51garlic_news(session):
     return news[:25]
 
 
+def scrape_sci99_news(session):
+    """从卓创资讯抓取大蒜新闻"""
+    news = []
+    try:
+        html = fetch('https://primagri.sci99.com/list/1_20509_4.html', session)
+        soup = BeautifulSoup(html, 'lxml')
+        for a in soup.find_all('a', href=True):
+            title = a.get_text(strip=True)
+            href = a['href']
+            if len(title) < 10:
+                continue
+            if not any(kw in title for kw in ['大蒜', '蒜价', '行情', '产区', '价格', '库存', '出口', '种植']):
+                continue
+            full_url = href if href.startswith('http') else 'https://primagri.sci99.com' + href
+            import hashlib
+            news.append({
+                'id': hashlib.md5(title.encode()).hexdigest()[:16],
+                'title': title, 'source': 'sci99', 'source_name': '卓创资讯',
+                'url': full_url, 'published_at': datetime.now(TZ).isoformat(),
+                'tag': '行情分析', 'tag_type': 'analysis',
+            })
+        if news:
+            logger.info(f'卓创资讯新闻: {len(news)} 条')
+    except Exception as e:
+        logger.warning(f'卓创资讯失败: {e}')
+    return news
+
+
+def scrape_agri_news(session):
+    """从中国农业信息网抓取大蒜相关"""
+    news = []
+    try:
+        html = fetch('https://www.agri.cn/sj/gxxs/', session)
+        soup = BeautifulSoup(html, 'lxml')
+        for a in soup.find_all('a', href=True):
+            title = a.get_text(strip=True)
+            href = a['href']
+            if len(title) < 10:
+                continue
+            if not any(kw in title for kw in ['大蒜', '蒜', '蔬菜', '批发', '价格']):
+                continue
+            full_url = href if href.startswith('http') else 'https://www.agri.cn' + href
+            tag = '政策' if any(w in title for w in ['政策', '农业部', '通知']) else '行情分析'
+            tag_type = 'policy' if tag == '政策' else 'analysis'
+            import hashlib
+            news.append({
+                'id': hashlib.md5(title.encode()).hexdigest()[:16],
+                'title': title, 'source': 'agri', 'source_name': '中国农业信息网',
+                'url': full_url, 'published_at': datetime.now(TZ).isoformat(),
+                'tag': tag, 'tag_type': tag_type,
+            })
+        if news:
+            logger.info(f'农业信息网新闻: {len(news)} 条')
+    except Exception as e:
+        logger.warning(f'农业信息网失败: {e}')
+    return news
+
+
 def scrape_mysteel_news(session):
     """从Mysteel抓取新闻"""
     news = []
@@ -275,6 +333,18 @@ def build_news(existing):
         logger.info(f'Mysteel新闻: {len(news_ms)} 条')
     except Exception as e:
         logger.warning(f'Mysteel新闻爬取失败: {e}')
+
+    try:
+        news_sci = scrape_sci99_news(session)
+        all_news.extend(news_sci)
+    except Exception as e:
+        logger.warning(f'卓创资讯失败: {e}')
+
+    try:
+        news_agri = scrape_agri_news(session)
+        all_news.extend(news_agri)
+    except Exception as e:
+        logger.warning(f'农业信息网失败: {e}')
 
     # 去重
     seen = set()
