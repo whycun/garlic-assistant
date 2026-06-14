@@ -20,8 +20,8 @@ import com.whycun.garlicapp.data.remote.NewsItem
 import com.whycun.garlicapp.ui.theme.*
 import com.whycun.garlicapp.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
+import androidx.compose.foundation.clickable
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(vm: MainViewModel = viewModel()) {
     val newsItems by vm.newsData.collectAsState()
@@ -79,7 +79,6 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
                     }
                 }
             }
-        }
     }
 }
 
