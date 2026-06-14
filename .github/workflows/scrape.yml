@@ -1,0 +1,47 @@
+name: 抓取大蒜行情数据
+
+on:
+  schedule:
+    # 北京时间 8:00-20:00 每30分钟运行一次
+    # UTC = 北京时间 - 8, 所以 0:00-12:00 UTC
+    - cron: '0,30 0-12 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: write  # 允许自动提交数据文件
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: 安装依赖
+        run: pip install -r scraper/requirements.txt
+
+      - name: 运行爬虫
+        run: python scraper/main.py
+        env:
+          TZ: Asia/Shanghai
+
+      - name: 提交更新的数据
+        run: |
+          git config user.name "garlic-bot"
+          git config user.email "bot@garlic.local"
+          git add data/prices.json data/news.json
+          if git diff --staged --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "📊 自动更新行情数据 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+            git push
+          fi
