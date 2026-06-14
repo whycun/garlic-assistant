@@ -4,7 +4,7 @@
 """
 import re
 import logging
-from ..utils import create_session, fetch_page, parse_html, clean_price, beijing_iso, today_str
+from scraper.utils import create_session, fetch_page, parse_html, clean_price, beijing_iso, today_str
 
 logger = logging.getLogger('51garlic')
 

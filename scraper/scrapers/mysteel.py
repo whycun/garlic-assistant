@@ -4,7 +4,7 @@ Mysteel (我的钢铁网-果蔬频道) 爬虫
 """
 import re
 import logging
-from ..utils import create_session, fetch_page, parse_html, clean_price, beijing_iso
+from scraper.utils import create_session, fetch_page, parse_html, clean_price, beijing_iso
 
 logger = logging.getLogger('mysteel')
 

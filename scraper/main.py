@@ -7,13 +7,13 @@ import os
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 确保能导入同目录模块
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# 确保项目根目录在 sys.path 中
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils import create_session, beijing_iso, today_str
-from scrapers.fiftyone_garlic import scrape_prices as g51_scrape_prices, scrape_news as g51_scrape_news
-from scrapers.mysteel import scrape_prices as ms_scrape_prices, scrape_news as ms_scrape_news
-from merger import merge_prices, merge_news, save_json
+from scraper.utils import create_session, beijing_iso, today_str
+from scraper.scrapers.fiftyone_garlic import scrape_prices as g51_scrape_prices, scrape_news as g51_scrape_news
+from scraper.scrapers.mysteel import scrape_prices as ms_scrape_prices, scrape_news as ms_scrape_news
+from scraper.merger import merge_prices, merge_news, save_json
 
 logging.basicConfig(
     level=logging.INFO,
