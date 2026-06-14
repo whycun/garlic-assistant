@@ -5,15 +5,15 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.pullrefresh.PullRefreshIndicator
+import androidx.compose.material.pullrefresh.pullRefresh
+import androidx.compose.material.pullrefresh.rememberPullRefreshState
 import androidx.compose.material3.*
-import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
-import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -24,30 +24,29 @@ import com.whycun.garlicapp.viewmodel.MainViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(vm: MainViewModel = viewModel()) {
     val newsItems by vm.newsData.collectAsState()
     val isLoading by vm.isLoading.collectAsState()
-    val pullState = rememberPullToRefreshState()
     var refreshMsg by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
 
-    if (pullState.isRefreshing) {
-        LaunchedEffect(true) {
-            try {
-                vm.refreshData()
-                refreshMsg = "✅ 刷新成功"
-            } catch (_: Exception) {
-                refreshMsg = "❌ 刷新失败"
+    var isRefreshing by remember { mutableStateOf(false) }
+    val pullState = rememberPullRefreshState(
+        refreshing = isRefreshing,
+        onRefresh = {
+            isRefreshing = true
+            scope.launch {
+                try { vm.refreshData(); refreshMsg = "✅ 刷新成功" }
+                catch (_: Exception) { refreshMsg = "❌ 刷新失败" }
+                isRefreshing = false
+                delay(2000)
+                refreshMsg = null
             }
-            pullState.endRefresh()
-            delay(2000)
-            refreshMsg = null
         }
-    }
+    )
 
-    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
+    Box(modifier = Modifier.fillMaxSize().background(Background).pullRefresh(pullState)) {
         LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
             val warnings = newsItems.filter { it.tagType == "warning" }
             if (warnings.isNotEmpty()) {
@@ -90,9 +89,9 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
             }
         }
 
-        PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
+        PullRefreshIndicator(refreshing = isRefreshing, state = pullState, modifier = Modifier.align(Alignment.TopCenter),
+            backgroundColor = Surface, contentColor = Green)
 
-        // 刷新结果提示
         refreshMsg?.let { msg ->
             Snackbar(modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp),
                 containerColor = if (msg.contains("✅")) Green else Red) {

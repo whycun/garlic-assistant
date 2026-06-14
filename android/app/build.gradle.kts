@@ -44,6 +44,7 @@ dependencies {
     implementation(composeBom)
 
     // Compose
+    implementation("androidx.compose.material:material")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
