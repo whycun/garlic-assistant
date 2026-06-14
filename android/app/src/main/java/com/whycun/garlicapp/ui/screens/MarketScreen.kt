@@ -173,8 +173,6 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
             }
         }
     }
-
-    }
 }
 
 @Composable
