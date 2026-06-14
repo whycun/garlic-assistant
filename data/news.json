@@ -1,108 +1,308 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-06-14T18:00:00+08:00",
+  "updated_at": "2026-06-14T21:11:53.405297+08:00",
   "items": [
     {
-      "id": "a1b2c3d4e5f67890",
-      "title": "金乡产区购销两旺，入库客商拿货积极，好货价格偏硬",
-      "source": "51garlic",
-      "source_name": "国际大蒜贸易网",
-      "url": "https://www.51garlic.com/zx/show.php?itemid=6839",
-      "published_at": "2026-06-14T10:30:00+08:00",
-      "tag": "产区动态",
-      "tag_type": "dynamics"
-    },
-    {
-      "id": "b2c3d4e5f6789012",
-      "title": "杞县上货量大增至三四百车，买家拿货放缓，行情稳中偏弱",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26060817/328D102EA5211ABF.html",
-      "published_at": "2026-06-14T08:00:00+08:00",
-      "tag": "产区动态",
-      "tag_type": "dynamics"
-    },
-    {
-      "id": "c3d4e5f678901234",
-      "title": "邳州净蒜上货量不大，6.5cm精品货源紧俏，价格稳硬",
+      "id": "70e9cf869dd6643d",
+      "title": "大蒜行情：产区交易分化 蒜市行情稳弱",
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6841",
-      "published_at": "2026-06-13T18:00:00+08:00",
-      "tag": "产区动态",
-      "tag_type": "dynamics"
-    },
-    {
-      "id": "d4e5f67890123456",
-      "title": "Mysteel日报：大蒜产区交易分化，蒜市行情稳弱",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "",
-      "published_at": "2026-06-13T16:00:00+08:00",
+      "published_at": "2026-06-14T21:11:47.543866+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "e5f6789012345678",
-      "title": "2026年大蒜出口退税维持不变，出口预期稳定",
+      "id": "a936a153673002c7",
+      "title": "大蒜行情：蒜价稳中偏硬 交易氛围活跃",
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
-      "url": "",
-      "published_at": "2026-06-13T10:00:00+08:00",
-      "tag": "政策",
-      "tag_type": "policy"
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6840",
+      "published_at": "2026-06-14T21:11:47.543894+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
     },
     {
-      "id": "f678901234567890",
-      "title": "秋播大蒜晚播面积增加，越冬受冻风险需重点关注",
+      "id": "35477784d753e5ea",
+      "title": "大蒜行情：蒜价持续追涨 交易购销两旺",
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
-      "url": "",
-      "published_at": "2026-06-12T14:00:00+08:00",
-      "tag": "风险提示",
-      "tag_type": "warning"
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6839",
+      "published_at": "2026-06-14T21:11:47.543908+08:00",
+      "tag": "产区动态",
+      "tag_type": "dynamics"
     },
     {
-      "id": "6789012345678901",
-      "title": "Mysteel年报：2025年国内大蒜市场回顾与2026年展望",
+      "id": "ee4ce2af3f50f3cf",
+      "title": "大蒜行情：大蒜交易升温 价格稳步上扬",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6838",
+      "published_at": "2026-06-14T21:11:47.543920+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "4da39586f2a889bd",
+      "title": "大蒜行情：入库收家增多 蒜价稳步上涨",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6837",
+      "published_at": "2026-06-14T21:11:47.543931+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "be39c1ddc1a5037c",
+      "title": "大蒜行情：成交量放大 蒜价稳硬上浮",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6836",
+      "published_at": "2026-06-14T21:11:47.543943+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "fa9143d0cd784a07",
+      "title": "大蒜产区：晴雨交替 新干蒜交易受影响",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6835",
+      "published_at": "2026-06-14T21:11:47.543957+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "96a76f75f99e5211",
+      "title": "大蒜行情：货源质量分化 好货价格显硬",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6832",
+      "published_at": "2026-06-14T21:11:47.543982+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "2ec4cb644c282b39",
+      "title": "大蒜行情：蒜市行情稳硬 好货成交积极",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6831",
+      "published_at": "2026-06-14T21:11:47.543994+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "0c499d007aeb785c",
+      "title": "大蒜行情：行情以稳为主 好货相对热需",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6830",
+      "published_at": "2026-06-14T21:11:47.544005+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "039580f2aae17cfe",
+      "title": "大蒜行情：行情稳硬运行 成交以质论价",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6829",
+      "published_at": "2026-06-14T21:11:47.544015+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "8b144d179a8fe3de",
+      "title": "大蒜行情：新蒜供应缩减 好货上涨明显",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6828",
+      "published_at": "2026-06-14T21:11:47.544026+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "1e7094610929d6d5",
+      "title": "大蒜行情：市场货源更替 交易热度下降",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6827",
+      "published_at": "2026-06-14T21:11:47.544037+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "a564d625eb5d2ddb",
+      "title": "大蒜产区：晴雨交替 新蒜晾晒有变",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6826",
+      "published_at": "2026-06-14T21:11:47.544047+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "3b677ba5eb993dee",
+      "title": "大蒜行情：产区交易分化 新蒜价格上涨",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6825",
+      "published_at": "2026-06-14T21:11:47.544058+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "3e50ae8c79d87e25",
+      "title": "大蒜行情：新蒜上货缩减 价格小幅上涨",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6824",
+      "published_at": "2026-06-14T21:11:47.544071+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "39ba4c623aaf0bd6",
+      "title": "大蒜行情：新蒜买家增多 局部交易见快",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6823",
+      "published_at": "2026-06-14T21:11:47.544082+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "f8e7071e9459f049",
+      "title": "大蒜行情：雨后新蒜上货 价格集体上行",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6822",
+      "published_at": "2026-06-14T21:11:47.544093+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "b74abd83895a3f6e",
+      "title": "5月29日莱芜市场大蒜价格行情",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26021016/C39E7D146895AE84.html",
-      "published_at": "2026-06-11T09:00:00+08:00",
-      "tag": "深度分析",
-      "tag_type": "deep"
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/1CF9DA6D15EB62FD.html",
+      "published_at": "2026-06-14T21:11:48.993406+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
     },
     {
-      "id": "7890123456789012",
-      "title": "蒜种价格回落至3.5-4.3元/斤，但人工费用显著上涨",
-      "source": "51garlic",
-      "source_name": "国际大蒜贸易网",
-      "url": "",
-      "published_at": "2026-06-10T15:00:00+08:00",
-      "tag": "成本动态",
-      "tag_type": "cost"
-    },
-    {
-      "id": "8901234567890123",
-      "title": "全国冷库蒜库存349万吨，为近五年同期最高水平",
+      "id": "7bfd37e1f6f9daa8",
+      "title": "5月29日兰陵市场大蒜价格行情",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "",
-      "published_at": "2026-06-09T11:00:00+08:00",
-      "tag": "风险提示",
-      "tag_type": "warning"
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/04AF45C061038E12.html",
+      "published_at": "2026-06-14T21:11:48.993438+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
     },
     {
-      "id": "9012345678901234",
-      "title": "大蒜市场早间提示：价格稳中偏强，入库需求支撑",
-      "source": "51garlic",
-      "source_name": "国际大蒜贸易网",
-      "url": "",
-      "published_at": "2026-06-14T07:00:00+08:00",
+      "id": "07adfac9576839ad",
+      "title": "5月29日邳州市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/725551B32AFE6E6B.html",
+      "published_at": "2026-06-14T21:11:48.993446+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "8253de368991ea76",
+      "title": "5月29日中牟市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/4262AAB33E70E7E6.html",
+      "published_at": "2026-06-14T21:11:48.993454+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "090e24087346bd4e",
+      "title": "5月29日杞县市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/38780BF73F2A746C.html",
+      "published_at": "2026-06-14T21:11:48.993460+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "3342ee5713187ac2",
+      "title": "5月29日金乡市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052911/96F885713AB9C334.html",
+      "published_at": "2026-06-14T21:11:48.993466+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "98137afd90af5f4b",
+      "title": "5月28日莱芜市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/191D6BEB00F41C47.html",
+      "published_at": "2026-06-14T21:11:48.993472+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "bb96b7a15b4b21bb",
+      "title": "5月28日兰陵市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/22B0FC85D029FDCE.html",
+      "published_at": "2026-06-14T21:11:48.993483+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "eafe685ce90d2bab",
+      "title": "5月28日邳州市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/E38DCE47F55AA176.html",
+      "published_at": "2026-06-14T21:11:48.993490+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "fa5bd538b7fbcfc7",
+      "title": "5月28日中牟市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/1D38148350DF0C56.html",
+      "published_at": "2026-06-14T21:11:48.993496+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "875d115de502fc28",
+      "title": "5月28日杞县市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/6077387561DBF9D5.html",
+      "published_at": "2026-06-14T21:11:48.993505+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "889267ed795bf022",
+      "title": "5月28日金乡市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26052810/5F22796506F98BC7.html",
+      "published_at": "2026-06-14T21:11:48.993511+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
   ],
-  "total_count": 10,
+  "total_count": 30,
   "max_items": 30
 }
