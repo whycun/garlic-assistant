@@ -9,7 +9,9 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.runtime.*
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -31,16 +33,29 @@ import com.whycun.garlicapp.viewmodel.MainViewModel
 val REGIONS = mapOf("jinxiang" to "金乡","qixian" to "杞县","pizhou" to "邳州","zhongmou" to "中牟")
 val PERIODS = listOf("日线" to "daily", "月线" to "monthly")
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MarketScreen(vm: MainViewModel = viewModel()) {
     val priceData by vm.priceData.collectAsState()
     val selectedRegion by vm.selectedRegion.collectAsState()
-    val isStale by vm.isStale.collectAsState()
     var selectedPeriod by remember { mutableStateOf("daily") }
     var selectedSpec by remember { mutableStateOf("") }
+    val pullState = rememberPullToRefreshState()
+    var refreshMsg by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
 
-    LazyColumn(modifier = Modifier.fillMaxSize().background(Background), contentPadding = PaddingValues(bottom = 8.dp)) {
+    if (pullState.isRefreshing) {
+        LaunchedEffect(true) {
+            try { vm.refreshData(); refreshMsg = "✅ 刷新成功" }
+            catch (_: Exception) { refreshMsg = "❌ 刷新失败" }
+            pullState.endRefresh()
+            delay(2000)
+            refreshMsg = null
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
+    LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
         // 走势图卡片
         item {
             Surface(modifier = Modifier.fillMaxWidth().padding(10.dp, 10.dp, 10.dp, 0.dp), color = Surface, shape = RoundedCornerShape(10.dp), shadowElevation = 1.dp) {
@@ -48,8 +63,7 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                         Text("📈 ${REGIONS[selectedRegion]} · ${selectedSpec.ifEmpty { "均价" }}走势",
                             fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                        Text("🔄 刷新", fontSize = 10.sp, color = Green,
-                            modifier = Modifier.clickable { scope.launch { vm.refreshData() } })
+                        Text("下拉刷新", fontSize = 10.sp, color = TextMuted)
                     }
 
                     // 产区标签
@@ -173,6 +187,16 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
             }
         }
     }
+
+        PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
+
+        refreshMsg?.let { msg ->
+            Snackbar(modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp),
+                containerColor = if (msg.contains("✅")) Green else Red) {
+                Text(msg, color = Color.White, fontSize = 14.sp)
+            }
+        }
+    } // Box
 }
 
 @Composable

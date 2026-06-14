@@ -2,7 +2,6 @@ package com.whycun.garlicapp.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -12,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -19,21 +19,34 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.whycun.garlicapp.data.remote.NewsItem
 import com.whycun.garlicapp.ui.theme.*
 import com.whycun.garlicapp.viewmodel.MainViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import androidx.compose.foundation.clickable
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(vm: MainViewModel = viewModel()) {
     val newsItems by vm.newsData.collectAsState()
     val isLoading by vm.isLoading.collectAsState()
-    val isStale by vm.isStale.collectAsState()
+    val pullState = rememberPullToRefreshState()
+    var refreshMsg by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
 
-    LazyColumn(
-        modifier = Modifier.fillMaxSize().background(Background),
-        contentPadding = PaddingValues(bottom = 8.dp)
-    ) {
-            // 预警横幅
+    if (pullState.isRefreshing) {
+        LaunchedEffect(true) {
+            try {
+                vm.refreshData()
+                refreshMsg = "✅ 刷新成功"
+            } catch (_: Exception) {
+                refreshMsg = "❌ 刷新失败"
+            }
+            pullState.endRefresh()
+            delay(2000)
+            refreshMsg = null
+        }
+    }
+
+    Box(modifier = Modifier.fillMaxSize().background(Background).nestedScroll(pullState.nestedScrollConnection)) {
+        LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
             val warnings = newsItems.filter { it.tagType == "warning" }
             if (warnings.isNotEmpty()) {
                 item {
@@ -49,12 +62,6 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
             item {
                 Row(Modifier.fillMaxWidth().padding(12.dp, 12.dp, 12.dp, 4.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text("📰 行情资讯", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                    Text(
-                    if (isLoading) "更新中..." else "🔄 刷新",
-                    fontSize = 11.sp,
-                    color = if (isLoading) TextMuted else Green,
-                    modifier = Modifier.clickable { scope.launch { vm.refreshData() } }
-                )
                 }
             }
 
@@ -79,6 +86,17 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
                     }
                 }
             }
+        }
+
+        PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
+
+        // 刷新结果提示
+        refreshMsg?.let { msg ->
+            Snackbar(modifier = Modifier.align(Alignment.BottomCenter).padding(16.dp),
+                containerColor = if (msg.contains("✅")) Green else Red) {
+                Text(msg, color = Color.White, fontSize = 14.sp)
+            }
+        }
     }
 }
 
