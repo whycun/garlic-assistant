@@ -20,9 +20,9 @@ android {
     signingConfigs {
         create("release") {
             storeFile = file("garlic-release.jks")
-            storePassword = "garlic123"
+            storePassword = "123456"
             keyAlias = "garlic"
-            keyPassword = "garlic123"
+            keyPassword = "123456"
         }
     }
 
