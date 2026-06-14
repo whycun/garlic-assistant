@@ -9,15 +9,15 @@ import java.util.concurrent.TimeUnit
 
 interface GarlicApi {
 
-    @GET("data/prices.json")
+    @GET("prices.json")
     suspend fun getPrices(): PriceResponse
 
-    @GET("data/news.json")
+    @GET("news.json")
     suspend fun getNews(): NewsResponse
 
     companion object {
-        // 主URL（GitHub Pages）
-        private const val BASE_URL = "https://whycun.github.io/garlic-assistant/"
+        // 主URL（GitHub原始文件）
+        private const val BASE_URL = "https://raw.githubusercontent.com/whycun/garlic-assistant/main/data/"
 
         // 备用URL（jsDelivr CDN）
         const val CDN_BASE = "https://cdn.jsdelivr.net/gh/whycun/garlic-assistant@main/"

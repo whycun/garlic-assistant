@@ -44,27 +44,44 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     val selectedRegion: StateFlow<String> = _selectedRegion
 
     init {
-        refreshData()
+        // 先秒加载本地assets数据
+        viewModelScope.launch {
+            repo.fetchPrices().onSuccess { _priceData.value = it }
+            repo.fetchNews().onSuccess { _newsData.value = it.items }
+        }
+        // 后台尝试网络刷新
+        refreshFromNetwork()
+    }
+
+    private fun refreshFromNetwork() {
+        viewModelScope.launch {
+            try {
+                repo.fetchPrices().onSuccess {
+                    if (it.regions.isNotEmpty()) {
+                        _priceData.value = it
+                        _isStale.value = false
+                    }
+                }
+                repo.fetchNews().onSuccess {
+                    if (it.items.isNotEmpty()) {
+                        _newsData.value = it.items
+                    }
+                }
+            } catch (_: Exception) {}
+        }
     }
 
     fun refreshData() {
         viewModelScope.launch {
             _isLoading.value = true
-            var success = false
-
-            repo.fetchPrices().onSuccess {
-                _priceData.value = it
-                _isStale.value = false
-                success = true
-            }.onFailure {
-                if (_priceData.value == null) _isStale.value = true
-            }
-
-            repo.fetchNews().onSuccess {
-                _newsData.value = it.items
-                success = true
-            }
-
+            try {
+                repo.fetchPrices().onSuccess {
+                    if (it.regions.isNotEmpty()) { _priceData.value = it; _isStale.value = false }
+                }
+                repo.fetchNews().onSuccess {
+                    if (it.items.isNotEmpty()) { _newsData.value = it.items }
+                }
+            } catch (_: Exception) {}
             _isLoading.value = false
         }
     }
