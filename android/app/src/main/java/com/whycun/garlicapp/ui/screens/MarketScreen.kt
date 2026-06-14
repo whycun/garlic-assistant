@@ -90,8 +90,23 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
                         }
                     }
 
-                    // 图表
-                    PriceChart(history = getPeriodData(priceData?.history ?: emptyList(), selectedPeriod, selectedRegion),
+                    // 图表数据（选规格则按比例推算）
+                    val rawHistory = priceData?.history ?: emptyList()
+                    val specMultiplier = if (selectedSpec.isNotEmpty()) {
+                        val specs = priceData?.regions?.get(selectedRegion)?.specs ?: emptyList()
+                        val spec = specs.find { it.name == selectedSpec }
+                        val specPrice = if (spec != null) (spec.low + spec.high) / 2 else 0.0
+                        val avgKey = selectedRegion + "_avg"
+                        val latestAvg = rawHistory.lastOrNull()?.let { h ->
+                            when(selectedRegion) { "jinxiang"->h.jinxiangAvg; "qixian"->h.qixianAvg; "pizhou"->h.pizhouAvg; "zhongmou"->h.zhongmouAvg; else->null }
+                        } ?: specPrice
+                        if (latestAvg > 0 && specPrice > 0) specPrice / latestAvg else 1.0
+                    } else 1.0
+
+                    val chartData = getPeriodData(rawHistory, selectedPeriod, selectedRegion).map { (date, avg) ->
+                        date to avg * specMultiplier
+                    }
+                    PriceChart(history = chartData,
                         modifier = Modifier.fillMaxWidth().height(180.dp), lineColor = Color(0xFF2E7D32))
 
                     // 统计

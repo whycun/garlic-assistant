@@ -1,5 +1,7 @@
 package com.whycun.garlicapp.ui.screens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -103,6 +106,7 @@ fun HomeScreen(vm: MainViewModel = viewModel()) {
 
 @Composable
 fun NewsCard(item: NewsItem) {
+    val context = LocalContext.current
     val tagColors = mapOf(
         "warning" to Pair(Orange, CardOrange),
         "analysis" to Pair(Color(0xFF1565C0), CardBlue),
@@ -119,7 +123,14 @@ fun NewsCard(item: NewsItem) {
         shape = RoundedCornerShape(10.dp),
         shadowElevation = 1.dp
     ) {
-        Column(modifier = Modifier.clickable { }.padding(14.dp)) {
+        Column(modifier = Modifier.clickable {
+            if (item.url.isNotBlank()) {
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
+                    context.startActivity(intent)
+                } catch (_: Exception) {}
+            }
+        }.padding(14.dp)) {
             Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                 if (item.tag.isNotEmpty()) {
                     Surface(color = tagBg, shape = RoundedCornerShape(3.dp)) {
