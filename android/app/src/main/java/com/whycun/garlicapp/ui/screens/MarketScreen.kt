@@ -10,6 +10,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -37,8 +38,18 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
     val isStale by vm.isStale.collectAsState()
     var selectedPeriod by remember { mutableStateOf("daily") }
     var selectedSpec by remember { mutableStateOf("") }
+    var isRefreshing by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
 
-    LazyColumn(modifier = Modifier.fillMaxSize().background(Background), contentPadding = PaddingValues(bottom = 8.dp)) {
+    PullToRefreshBox(
+        isRefreshing = isRefreshing,
+        onRefresh = {
+            isRefreshing = true
+            scope.launch { vm.refreshData(); isRefreshing = false }
+        },
+        modifier = Modifier.fillMaxSize().background(Background)
+    ) {
+    LazyColumn(modifier = Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
         // 走势图卡片
         item {
             Surface(modifier = Modifier.fillMaxWidth().padding(10.dp, 10.dp, 10.dp, 0.dp), color = Surface, shape = RoundedCornerShape(10.dp), shadowElevation = 1.dp) {
@@ -170,6 +181,7 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
             }
         }
     }
+    } // PullToRefreshBox end
 }
 
 @Composable
