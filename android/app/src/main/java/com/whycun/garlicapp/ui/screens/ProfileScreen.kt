@@ -195,16 +195,6 @@ fun ProfileScreen(vm: MainViewModel = viewModel()) {
 }
 
 @Composable
-fun SummaryCell(label: String, value: String, bg: Color, vColor: Color, modifier: Modifier) {
-    Surface(modifier = modifier, color = bg, shape = RoundedCornerShape(8.dp)) {
-        Column(modifier = Modifier.padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(label, fontSize = 10.sp, color = TextMuted)
-            Text(value, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = vColor)
-        }
-    }
-}
-
-@Composable
 fun StatItem(value: String, label: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(value, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = TextPrimary)
