@@ -178,7 +178,6 @@ fun MarketScreen(vm: MainViewModel = viewModel()) {
             }
         }
     }
-    } // LazyColumn end
 
         PullToRefreshContainer(state = pullState, modifier = Modifier.align(Alignment.TopCenter))
     } // Box end
