@@ -53,13 +53,92 @@ FALLBACK_PRICES = {
     ]},
 }
 
+# 默认因素数据（来源：农业农村部2025年12月供需平衡表+Mysteel+51garlic）
 FACTORS = {
-    "national_inventory": {"label": "全国库存量", "value": "349万吨", "level": "high"},
-    "planting_area": {"label": "种植面积", "value": "1,200万亩 (+1.0%)", "level": "neutral"},
-    "export_forecast": {"label": "出口量预期", "value": "340万吨 (+6.6%)", "level": "positive"},
-    "weather_risk": {"label": "天气风险", "value": "晚播冻害关注中", "level": "high"},
-    "seed_cost": {"label": "蒜种成本", "value": "3.5-4.3元/斤", "level": "down"},
+    "national_inventory": {"label": "全国库存量", "value": "349万吨", "level": "high",
+        "source": "Mysteel/51garlic 2026-06"},
+    "planting_area": {"label": "种植面积", "value": "1,200万亩 (+1.0%)", "level": "neutral",
+        "source": "农业农村部 2025-12供需平衡表"},
+    "export_forecast": {"label": "出口量预期", "value": "340万吨 (+6.6%)", "level": "positive",
+        "source": "农业农村部 2026年展望"},
+    "weather_risk": {"label": "天气风险", "value": "晚播冻害关注中", "level": "high",
+        "source": "51garlic/Mysteel 产区监测"},
+    "seed_cost": {"label": "蒜种成本", "value": "3.5-4.3元/斤", "level": "down",
+        "source": "51garlic 市场报价"},
 }
+
+
+def scrape_factors_from_moa(session):
+    """尝试从农业农村部获取最新供需数据"""
+    updated = {}
+    try:
+        html = fetch('https://scs.moa.gov.cn/jcyj/', session)
+        soup = BeautifulSoup(html, 'lxml')
+        text = soup.get_text()
+
+        # 提取关键数字（正则匹配）
+        import re
+        # 种植面积
+        m = re.search(r'种植面积[约达]?\s*(\d+[.,]?\d*)\s*万?亩', text)
+        if m:
+            area = m.group(1).replace(',', '')
+            updated['planting_area'] = {
+                'label': '种植面积', 'value': f'{area}万亩', 'level': 'neutral',
+                'source': '农业农村部官网'
+            }
+        # 库存
+        m = re.search(r'库存[约达]?\s*(\d+[.,]?\d*)\s*万?吨', text)
+        if m:
+            inv = m.group(1).replace(',', '')
+            updated['national_inventory'] = {
+                'label': '全国库存量', 'value': f'{inv}万吨', 'level': 'high' if float(inv) > 300 else 'neutral',
+                'source': '农业农村部官网'
+            }
+        # 出口
+        m = re.search(r'出口[量约达]?\s*(\d+[.,]?\d*)\s*万?吨', text)
+        if m:
+            exp = m.group(1).replace(',', '')
+            updated['export_forecast'] = {
+                'label': '出口量预期', 'value': f'{exp}万吨', 'level': 'positive',
+                'source': '农业农村部官网'
+            }
+        if updated:
+            logger.info(f'从农业农村部获取到 {len(updated)} 项因素更新')
+    except Exception as e:
+        logger.warning(f'农业农村部因素获取失败: {e}')
+    return updated
+
+
+def scrape_factors_from_mysteel(session):
+    """从Mysteel获取市场因素"""
+    updated = {}
+    try:
+        html = fetch('https://ncp.mysteel.com/', session)
+        soup = BeautifulSoup(html, 'lxml')
+        text = soup.get_text()
+        import re
+        # 库存
+        m = re.search(r'库存[约达]?\s*(\d+[.,]?\d*)\s*万?吨', text)
+        if m:
+            inv = m.group(1).replace(',', '')
+            updated['national_inventory'] = {
+                'label': '全国库存量', 'value': f'{inv}万吨', 'level': 'high' if float(inv) > 300 else 'neutral',
+                'source': 'Mysteel'
+            }
+        # 天气风险
+        if '冻害' in text or '受冻' in text:
+            updated['weather_risk'] = {
+                'label': '天气风险', 'value': '冻害预警关注中', 'level': 'high',
+                'source': 'Mysteel产区监测'
+            }
+        elif '干旱' in text:
+            updated['weather_risk'] = {
+                'label': '天气风险', 'value': '干旱预警关注中', 'level': 'high',
+                'source': 'Mysteel产区监测'
+            }
+    except Exception as e:
+        logger.warning(f'Mysteel因素获取失败: {e}')
+    return updated
 
 
 def fetch(url, session=None):
@@ -304,13 +383,30 @@ def build_prices(existing):
     if len(history) > 90:
         history = history[-90:]
 
+    # 尝试从官方源更新因素
+    factors = dict(FACTORS)  # 复制默认值
+    try:
+        moa_updates = scrape_factors_from_moa(session)
+        if moa_updates:
+            factors.update(moa_updates)
+            logger.info(f'已合并农业农村部因素')
+    except Exception as e:
+        logger.warning(f'因素更新失败（农业部）: {e}')
+    try:
+        ms_updates = scrape_factors_from_mysteel(session)
+        if ms_updates:
+            factors.update(ms_updates)
+            logger.info(f'已合并Mysteel因素')
+    except Exception as e:
+        logger.warning(f'因素更新失败（Mysteel）: {e}')
+
     return {
         'schema_version': 1,
         'updated_at': datetime.now(TZ).isoformat(),
         'status': 'ok',
         'regions': regions,
         'history': history,
-        'factors': FACTORS,
+        'factors': factors,
     }
 
 
