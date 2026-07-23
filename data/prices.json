@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-22T22:31:52.185239+08:00",
+  "updated_at": "2026-07-23T09:56:53.546987+08:00",
   "status": "ok",
   "regions": {
     "jinxiang": {
@@ -521,6 +521,13 @@
     },
     {
       "date": "2026-07-22",
+      "jinxiang_avg": 2.06,
+      "qixian_avg": 1.72,
+      "pizhou_avg": 2.67,
+      "zhongmou_avg": 1.79
+    },
+    {
+      "date": "2026-07-23",
       "jinxiang_avg": 2.06,
       "qixian_avg": 1.72,
       "pizhou_avg": 2.67,
