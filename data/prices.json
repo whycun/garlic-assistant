@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-01T21:35:13.748960+08:00",
+  "updated_at": "2026-09-02T10:05:59.495560+08:00",
   "status": "ok",
   "regions": {
     "jinxiang": {
@@ -148,13 +148,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-05-25",
-      "jinxiang_avg": 2.0,
-      "qixian_avg": 1.73,
-      "pizhou_avg": 3.2,
-      "zhongmou_avg": 1.81
-    },
     {
       "date": "2026-05-27",
       "jinxiang_avg": 2.08,
@@ -773,6 +766,13 @@
     },
     {
       "date": "2026-09-01",
+      "jinxiang_avg": 2.06,
+      "qixian_avg": 1.72,
+      "pizhou_avg": 2.67,
+      "zhongmou_avg": 1.79
+    },
+    {
+      "date": "2026-09-02",
       "jinxiang_avg": 2.06,
       "qixian_avg": 1.72,
       "pizhou_avg": 2.67,
