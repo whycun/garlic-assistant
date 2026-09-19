@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-19T15:26:41.542128+08:00",
+  "updated_at": "2026-09-19T20:02:08.220397+08:00",
   "items": [
     {
       "id": "5efaec4f68b4998d",
@@ -8,7 +8,17 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6937",
-      "published_at": "2026-09-19T15:26:35.110532+08:00",
+      "published_at": "2026-09-19T19:59:24.616963+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "5121367dea23f75e",
+      "title": "大蒜行情：库蒜行情平稳 交易不温不火新",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6946",
+      "published_at": "2026-09-19T19:59:24.616989+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -18,7 +28,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6945",
-      "published_at": "2026-09-19T15:26:35.110562+08:00",
+      "published_at": "2026-09-19T19:59:24.616999+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -28,7 +38,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6944",
-      "published_at": "2026-09-19T15:26:35.110576+08:00",
+      "published_at": "2026-09-19T19:59:24.617009+08:00",
       "tag": "产区动态",
       "tag_type": "dynamics"
     },
@@ -38,7 +48,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6943",
-      "published_at": "2026-09-19T15:26:35.110589+08:00",
+      "published_at": "2026-09-19T19:59:24.617019+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -48,7 +58,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6942",
-      "published_at": "2026-09-19T15:26:35.110606+08:00",
+      "published_at": "2026-09-19T19:59:24.617028+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -58,7 +68,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6941",
-      "published_at": "2026-09-19T15:26:35.110619+08:00",
+      "published_at": "2026-09-19T19:59:24.617037+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -68,7 +78,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6940",
-      "published_at": "2026-09-19T15:26:35.110631+08:00",
+      "published_at": "2026-09-19T19:59:24.617046+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -78,7 +88,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6939",
-      "published_at": "2026-09-19T15:26:35.110643+08:00",
+      "published_at": "2026-09-19T19:59:24.617054+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -88,7 +98,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6938",
-      "published_at": "2026-09-19T15:26:35.110657+08:00",
+      "published_at": "2026-09-19T19:59:24.617063+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -98,7 +108,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6936",
-      "published_at": "2026-09-19T15:26:35.110670+08:00",
+      "published_at": "2026-09-19T19:59:24.617073+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -108,7 +118,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6935",
-      "published_at": "2026-09-19T15:26:35.110683+08:00",
+      "published_at": "2026-09-19T19:59:24.617081+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -118,7 +128,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6934",
-      "published_at": "2026-09-19T15:26:35.110695+08:00",
+      "published_at": "2026-09-19T19:59:24.617090+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -128,7 +138,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6933",
-      "published_at": "2026-09-19T15:26:35.110707+08:00",
+      "published_at": "2026-09-19T19:59:24.617097+08:00",
       "tag": "产区动态",
       "tag_type": "dynamics"
     },
@@ -138,7 +148,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6932",
-      "published_at": "2026-09-19T15:26:35.110719+08:00",
+      "published_at": "2026-09-19T19:59:24.617106+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -148,7 +158,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6931",
-      "published_at": "2026-09-19T15:26:35.110730+08:00",
+      "published_at": "2026-09-19T19:59:24.617114+08:00",
       "tag": "产区动态",
       "tag_type": "dynamics"
     },
@@ -158,7 +168,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6930",
-      "published_at": "2026-09-19T15:26:35.110742+08:00",
+      "published_at": "2026-09-19T19:59:24.617129+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -168,7 +178,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6929",
-      "published_at": "2026-09-19T15:26:35.110753+08:00",
+      "published_at": "2026-09-19T19:59:24.617138+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -178,7 +188,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6928",
-      "published_at": "2026-09-19T15:26:35.110765+08:00",
+      "published_at": "2026-09-19T19:59:24.617146+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -188,117 +198,107 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6927",
-      "published_at": "2026-09-19T15:26:35.110777+08:00",
+      "published_at": "2026-09-19T19:59:24.617156+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "8e41e83b4dce0340",
-      "title": "大蒜行情：交易按部就班 买卖均较清淡",
-      "source": "51garlic",
-      "source_name": "国际大蒜贸易网",
-      "url": "https://www.51garlic.com/zx/show.php?itemid=6926",
-      "published_at": "2026-09-19T15:26:35.110788+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "09f3d8a3e9a94c57",
-      "title": "9月4日莱芜市场大蒜价格行情",
+      "id": "f92e06077512c89c",
+      "title": "全国主产区玉米酒精企业利润估算指标注释说明",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/EDEF423FBB0A7B68.html",
-      "published_at": "2026-09-19T15:26:36.208562+08:00",
+      "url": "https://mfs.mysteelcdn.com/group1/M00/50/43/rBL632TkJIiAJdSKAALttdJCLyA929.pdf",
+      "published_at": "2026-09-19T20:02:05.879074+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "2f79eb9f09ddb66a",
-      "title": "9月4日兰陵市场大蒜价格行情",
+      "id": "81cc8798fb7ab5b2",
+      "title": "关于Mysteel计划删除烟台、延安、淄博市场苹果价格行情部分规格的通",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/5412D9FDA548D1ED.html",
-      "published_at": "2026-09-19T15:26:36.208586+08:00",
+      "url": "https://mfs.mysteelcdn.com/group1/M00/43/C3/rBL632qLmpiASiSAAAHrcgf96r8122.pdf",
+      "published_at": "2026-09-19T20:02:05.879101+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "8500e8e58fd65950",
-      "title": "9月4日邳州市场大蒜价格行情",
+      "id": "ef26065421952de7",
+      "title": "国家发改委&上海钢联：大宗工业原材料、能源及农产品价格周报（6月22日-6月26日）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/849F62CBFE2C7AE8.html",
-      "published_at": "2026-09-19T15:26:36.208596+08:00",
+      "url": "https://www.jgjcndrc.org.cn/detail?clmId=1834875465901326337&tId=2071528640115425281",
+      "published_at": "2026-09-19T20:02:05.879122+08:00",
+      "tag": "深度分析",
+      "tag_type": "deep"
+    },
+    {
+      "id": "4e29a980648f20e1",
+      "title": "国家发改委&上海钢联联合发布大宗商品价格指数",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://www.jgjcndrc.org.cn/detail?tId=1839225738396483585",
+      "published_at": "2026-09-19T20:02:05.879128+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "ab4b58812efdd704",
-      "title": "9月4日中牟市场大蒜价格行情",
+      "id": "463f53c21781b1e3",
+      "title": "Mysteel解读：本周农副加工产品价格报告（09.04-09.11）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/01208D2421026635.html",
-      "published_at": "2026-09-19T15:26:36.208603+08:00",
+      "url": "https://ncp.mysteel.com/a/26091409/55B2EADB4ECDC77F.html",
+      "published_at": "2026-09-19T20:02:05.879137+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "7f6c904bb2b30005",
-      "title": "9月4日杞县市场大蒜价格行情",
+      "id": "3dedf88e49f9b472",
+      "title": "Mysteel解读：本周畜牧产品价格报告（09.04-09.11）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/ED51AED03C8DE3E3.html",
-      "published_at": "2026-09-19T15:26:36.208610+08:00",
+      "url": "https://ncp.mysteel.com/a/26091408/D72FCBCCC9F056CB.html",
+      "published_at": "2026-09-19T20:02:05.879144+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "50f75bea7ae726bc",
-      "title": "9月4日金乡市场大蒜价格行情",
+      "id": "a877e335cbe4e6d9",
+      "title": "Mysteel解读：仔猪行情遇冷 供需失衡与信心不足下的弱势格局",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090412/54BA8480853392D1.html",
-      "published_at": "2026-09-19T15:26:36.208617+08:00",
+      "url": "https://ncp.mysteel.com/a/26091214/1FDC35F9F2013913.html",
+      "published_at": "2026-09-19T20:02:05.879155+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "3f7963ec7518c423",
-      "title": "9月3日莱芜市场大蒜价格行情",
+      "id": "c8922a160d89f5f4",
+      "title": "Mysteel早报：木薯淀粉价格弱稳运行（20260918）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090310/25F596A9DD753D71.html",
-      "published_at": "2026-09-19T15:26:36.208624+08:00",
+      "url": "https://ncp.mysteel.com/a/26091809/D9C80FE761D06DD1.html",
+      "published_at": "2026-09-19T20:02:05.879212+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "408da329eb3eef76",
-      "title": "9月3日兰陵市场大蒜价格行情",
+      "id": "87bb87370486a3d7",
+      "title": "Mysteel早报：今日小麦淀粉与谷朊粉价格坚挺运行（20260918）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090310/89CAA843C6398CF1.html",
-      "published_at": "2026-09-19T15:26:36.208635+08:00",
+      "url": "https://ncp.mysteel.com/a/26091808/05C937BF150FB3F8.html",
+      "published_at": "2026-09-19T20:02:05.879220+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "1ee9107b6de77cb3",
-      "title": "9月3日邳州市场大蒜价格行情",
+      "id": "d7512d6642c0d0a2",
+      "title": "Mysteel：鸡蛋周度价格速览（2026年第38周）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090310/4366FA6F896DD4DD.html",
-      "published_at": "2026-09-19T15:26:36.208642+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "db0164f4dc6cd98e",
-      "title": "9月3日中牟市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26090310/8FEB515076EF74F4.html",
-      "published_at": "2026-09-19T15:26:36.208649+08:00",
+      "url": "https://ncp.mysteel.com/a/26091817/CC6D46F4C1158BAF.html",
+      "published_at": "2026-09-19T20:02:05.879231+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
