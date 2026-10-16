@@ -1,14 +1,74 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T10:22:47.626887+08:00",
+  "updated_at": "2026-10-16T15:23:19.423336+08:00",
   "items": [
+    {
+      "id": "b9f14fb6b6328d20",
+      "title": "9月29日金乡市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092909/49C7F3AB8697E8DD.html",
+      "published_at": "2026-10-16T15:23:15.303372+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "7de61e332b6cc18e",
+      "title": "9月28日莱芜市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092811/6AD863BF224EBD09.html",
+      "published_at": "2026-10-16T15:23:15.303391+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "1489dff959584f20",
+      "title": "9月28日兰陵市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092811/91C89FAAB38EC7AF.html",
+      "published_at": "2026-10-16T15:23:15.303401+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "41180b3de3b07a5a",
+      "title": "9月28日邳州市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092811/CD4FCDE403768D4A.html",
+      "published_at": "2026-10-16T15:23:15.303408+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "86341dfe695a7268",
+      "title": "9月28日中牟市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092811/E4617ECC468EBE21.html",
+      "published_at": "2026-10-16T15:23:15.303416+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "563f3d32753317a4",
+      "title": "9月28日杞县市场大蒜价格行情",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://guoshu.mysteel.com/dasuan/m/26092811/6ABB5F54516846DF.html",
+      "published_at": "2026-10-16T15:23:15.303423+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
     {
       "id": "745256c2ca56de59",
       "title": "9月28日金乡市场大蒜价格行情",
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092811/B556B78CAD3530E8.html",
-      "published_at": "2026-10-16T10:22:44.249666+08:00",
+      "published_at": "2026-10-16T15:23:15.303462+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -18,7 +78,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/60CC6B7CCE237C2A.html",
-      "published_at": "2026-10-16T10:22:44.249684+08:00",
+      "published_at": "2026-10-16T15:23:15.303469+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -28,7 +88,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/1B2F449BA956128D.html",
-      "published_at": "2026-10-16T10:22:44.249693+08:00",
+      "published_at": "2026-10-16T15:23:15.303475+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -38,7 +98,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/BA1272C2685FACB1.html",
-      "published_at": "2026-10-16T10:22:44.249700+08:00",
+      "published_at": "2026-10-16T15:23:15.303481+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -48,7 +108,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/EC9A375FC54D81C3.html",
-      "published_at": "2026-10-16T10:22:44.249706+08:00",
+      "published_at": "2026-10-16T15:23:15.303488+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -58,7 +118,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/4376E2ADE6A6980D.html",
-      "published_at": "2026-10-16T10:22:44.249713+08:00",
+      "published_at": "2026-10-16T15:23:15.303497+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -68,7 +128,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092411/1490C2C86AADAD63.html",
-      "published_at": "2026-10-16T10:22:44.249719+08:00",
+      "published_at": "2026-10-16T15:23:15.303504+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -78,7 +138,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/E55D26D4551B39F9.html",
-      "published_at": "2026-10-16T10:22:44.249726+08:00",
+      "published_at": "2026-10-16T15:23:15.303511+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -88,7 +148,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/54E71AE77488F897.html",
-      "published_at": "2026-10-16T10:22:44.249732+08:00",
+      "published_at": "2026-10-16T15:23:15.303517+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -98,7 +158,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/E7810E6AEA0A08B0.html",
-      "published_at": "2026-10-16T10:22:44.249738+08:00",
+      "published_at": "2026-10-16T15:23:15.303523+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -108,7 +168,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/1DB036D164E5AFA9.html",
-      "published_at": "2026-10-16T10:22:44.249744+08:00",
+      "published_at": "2026-10-16T15:23:15.303529+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -118,7 +178,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/A1AC74745760A650.html",
-      "published_at": "2026-10-16T10:22:44.249751+08:00",
+      "published_at": "2026-10-16T15:23:15.303536+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -128,67 +188,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26092311/9D09C6219E27D816.html",
-      "published_at": "2026-10-16T10:22:44.249760+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "447836f1c58baaab",
-      "title": "9月22日莱芜市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092211/A0C9A61EBB1D757D.html",
-      "published_at": "2026-10-16T10:22:44.249767+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "4a8cee61b8a2da0a",
-      "title": "9月22日兰陵市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092211/EA09DF25AA7B0E71.html",
-      "published_at": "2026-10-16T10:22:44.249773+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "5f0d4dcb5aa96586",
-      "title": "9月22日中牟市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092211/BED07BD7A7202CE6.html",
-      "published_at": "2026-10-16T10:22:44.249785+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "78a2d4c27ea04de6",
-      "title": "9月22日邳州市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092211/C1147073F79757B5.html",
-      "published_at": "2026-10-16T10:22:44.249792+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "cd6ac991d6ff6db3",
-      "title": "9月22日杞县市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092210/1404945E832AB05D.html",
-      "published_at": "2026-10-16T10:22:44.249798+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "677bf0adf35abbf1",
-      "title": "9月22日金乡市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26092210/9AE6FBBADC6D8223.html",
-      "published_at": "2026-10-16T10:22:44.249804+08:00",
+      "published_at": "2026-10-16T15:23:15.303542+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -198,7 +198,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45725339.html",
-      "published_at": "2026-10-16T10:22:45.809912+08:00",
+      "published_at": "2026-10-16T15:23:16.832053+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -208,7 +208,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45733063.html",
-      "published_at": "2026-10-16T10:22:45.809932+08:00",
+      "published_at": "2026-10-16T15:23:16.832075+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -218,7 +218,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45573359.html",
-      "published_at": "2026-10-16T10:22:45.809941+08:00",
+      "published_at": "2026-10-16T15:23:16.832084+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -228,7 +228,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45713086.html",
-      "published_at": "2026-10-16T10:22:45.809952+08:00",
+      "published_at": "2026-10-16T15:23:16.832092+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -238,7 +238,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45674817.html",
-      "published_at": "2026-10-16T10:22:45.809959+08:00",
+      "published_at": "2026-10-16T15:23:16.832098+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -248,7 +248,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45762025.html",
-      "published_at": "2026-10-16T10:22:45.809967+08:00",
+      "published_at": "2026-10-16T15:23:16.832110+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -258,7 +258,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45744246.html",
-      "published_at": "2026-10-16T10:22:45.809974+08:00",
+      "published_at": "2026-10-16T15:23:16.832117+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -268,7 +268,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45744066.html",
-      "published_at": "2026-10-16T10:22:45.809980+08:00",
+      "published_at": "2026-10-16T15:23:16.832124+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -278,7 +278,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45734351.html",
-      "published_at": "2026-10-16T10:22:45.809987+08:00",
+      "published_at": "2026-10-16T15:23:16.832130+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -288,21 +288,11 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45728492.html",
-      "published_at": "2026-10-16T10:22:45.809994+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "1ed123ee99bfef9d",
-      "title": "中国大蒜供需平衡表大众版（2026年9月会商发布）",
-      "source": "agri",
-      "source_name": "中国农业信息网",
-      "url": "https://www.agri.cn./202610/t20261009_8875465.htm",
-      "published_at": "2026-10-16T10:22:47.626315+08:00",
+      "published_at": "2026-10-16T15:23:16.832136+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
   ],
-  "total_count": 30,
+  "total_count": 29,
   "max_items": 30
 }
