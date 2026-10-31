@@ -1,14 +1,24 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T11:24:40.023431+08:00",
+  "updated_at": "2026-10-31T17:51:11.154048+08:00",
   "items": [
+    {
+      "id": "a18e5ff0e95b9536",
+      "title": "大蒜行情：买卖略显僵持 主流行情持稳新",
+      "source": "51garlic",
+      "source_name": "国际大蒜贸易网",
+      "url": "https://www.51garlic.com/zx/show.php?itemid=6990",
+      "published_at": "2026-10-31T17:50:55.662443+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
     {
       "id": "2747337a58605c3f",
       "title": "大蒜行情：交易起色不大 价格波动有限",
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6989",
-      "published_at": "2026-10-31T11:24:33.916739+08:00",
+      "published_at": "2026-10-31T17:50:55.662462+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -18,7 +28,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6988",
-      "published_at": "2026-10-31T11:24:33.916761+08:00",
+      "published_at": "2026-10-31T17:50:55.662470+08:00",
       "tag": "产区动态",
       "tag_type": "dynamics"
     },
@@ -28,7 +38,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6987",
-      "published_at": "2026-10-31T11:24:33.916773+08:00",
+      "published_at": "2026-10-31T17:50:55.662477+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -38,7 +48,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6986",
-      "published_at": "2026-10-31T11:24:33.916782+08:00",
+      "published_at": "2026-10-31T17:50:55.662484+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -48,7 +58,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6985",
-      "published_at": "2026-10-31T11:24:33.916791+08:00",
+      "published_at": "2026-10-31T17:50:55.662490+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -58,7 +68,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6984",
-      "published_at": "2026-10-31T11:24:33.916800+08:00",
+      "published_at": "2026-10-31T17:50:55.662497+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -68,7 +78,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6982",
-      "published_at": "2026-10-31T11:24:33.916823+08:00",
+      "published_at": "2026-10-31T17:50:55.662507+08:00",
       "tag": "产区动态",
       "tag_type": "dynamics"
     },
@@ -78,7 +88,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6981",
-      "published_at": "2026-10-31T11:24:33.916833+08:00",
+      "published_at": "2026-10-31T17:50:55.662513+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -88,7 +98,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6980",
-      "published_at": "2026-10-31T11:24:33.916841+08:00",
+      "published_at": "2026-10-31T17:50:55.662520+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -98,7 +108,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6979",
-      "published_at": "2026-10-31T11:24:33.916851+08:00",
+      "published_at": "2026-10-31T17:50:55.662526+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -108,7 +118,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6978",
-      "published_at": "2026-10-31T11:24:33.916859+08:00",
+      "published_at": "2026-10-31T17:50:55.662533+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -118,7 +128,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6977",
-      "published_at": "2026-10-31T11:24:33.916867+08:00",
+      "published_at": "2026-10-31T17:50:55.662539+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -128,7 +138,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6976",
-      "published_at": "2026-10-31T11:24:33.916876+08:00",
+      "published_at": "2026-10-31T17:50:55.662545+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -138,7 +148,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6975",
-      "published_at": "2026-10-31T11:24:33.916884+08:00",
+      "published_at": "2026-10-31T17:50:55.662551+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -148,7 +158,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6974",
-      "published_at": "2026-10-31T11:24:33.916893+08:00",
+      "published_at": "2026-10-31T17:50:55.662557+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -158,7 +168,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6973",
-      "published_at": "2026-10-31T11:24:33.916901+08:00",
+      "published_at": "2026-10-31T17:50:55.662563+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -168,7 +178,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6972",
-      "published_at": "2026-10-31T11:24:33.916909+08:00",
+      "published_at": "2026-10-31T17:50:55.662570+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -178,17 +188,7 @@
       "source": "51garlic",
       "source_name": "国际大蒜贸易网",
       "url": "https://www.51garlic.com/zx/show.php?itemid=6971",
-      "published_at": "2026-10-31T11:24:33.916917+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "6cf6782889dec532",
-      "title": "大蒜行情：行情暂时企稳  成交以质论价",
-      "source": "51garlic",
-      "source_name": "国际大蒜贸易网",
-      "url": "https://www.51garlic.com/zx/show.php?itemid=6970",
-      "published_at": "2026-10-31T11:24:33.916925+08:00",
+      "published_at": "2026-10-31T17:50:55.662576+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -198,7 +198,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101611/4CF652F267FCE1BC.html",
-      "published_at": "2026-10-31T11:24:35.960955+08:00",
+      "published_at": "2026-10-31T17:51:04.456354+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -208,7 +208,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101611/D828DDCC53CA1E68.html",
-      "published_at": "2026-10-31T11:24:35.960974+08:00",
+      "published_at": "2026-10-31T17:51:04.456369+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -218,7 +218,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101611/3B164A9500DA0142.html",
-      "published_at": "2026-10-31T11:24:35.960980+08:00",
+      "published_at": "2026-10-31T17:51:04.456374+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -228,7 +228,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101611/213B30FC7DAA7F2C.html",
-      "published_at": "2026-10-31T11:24:35.960986+08:00",
+      "published_at": "2026-10-31T17:51:04.456378+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -238,7 +238,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101611/8CA56AFDED48252B.html",
-      "published_at": "2026-10-31T11:24:35.960991+08:00",
+      "published_at": "2026-10-31T17:51:04.456382+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -248,7 +248,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101610/D8E4289261FDA7FC.html",
-      "published_at": "2026-10-31T11:24:35.960996+08:00",
+      "published_at": "2026-10-31T17:51:04.456386+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -258,7 +258,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101511/EEA55EB6D0356CB8.html",
-      "published_at": "2026-10-31T11:24:35.961007+08:00",
+      "published_at": "2026-10-31T17:51:04.456389+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -268,7 +268,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101511/6C3AEFE523146536.html",
-      "published_at": "2026-10-31T11:24:35.961013+08:00",
+      "published_at": "2026-10-31T17:51:04.456396+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -278,7 +278,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101511/3A3F2261006E9FBF.html",
-      "published_at": "2026-10-31T11:24:35.961018+08:00",
+      "published_at": "2026-10-31T17:51:04.456400+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -288,7 +288,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101511/09635C985A896060.html",
-      "published_at": "2026-10-31T11:24:35.961023+08:00",
+      "published_at": "2026-10-31T17:51:04.456406+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -298,7 +298,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://guoshu.mysteel.com/dasuan/m/26101511/A979E990A557E98C.html",
-      "published_at": "2026-10-31T11:24:35.961028+08:00",
+      "published_at": "2026-10-31T17:51:04.456411+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
