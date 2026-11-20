@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T22:37:09.400466+08:00",
+  "updated_at": "2026-11-20T13:01:05.033375+08:00",
   "items": [
     {
       "id": "f92e06077512c89c",
@@ -8,7 +8,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://mfs.mysteelcdn.com/group1/M00/50/43/rBL632TkJIiAJdSKAALttdJCLyA929.pdf",
-      "published_at": "2026-11-19T22:37:04.466884+08:00",
+      "published_at": "2026-11-20T13:01:01.592820+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -18,7 +18,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://mfs.mysteelcdn.com/group1/M00/18/22/rBL64GnLLmCAP9ubAAKwiPN2RQU382.pdf",
-      "published_at": "2026-11-19T22:37:04.466911+08:00",
+      "published_at": "2026-11-20T13:01:01.592853+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -28,7 +28,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://www.jgjcndrc.org.cn/detail?clmId=1834875465901326337&tId=2071528640115425281",
-      "published_at": "2026-11-19T22:37:04.466928+08:00",
+      "published_at": "2026-11-20T13:01:01.592868+08:00",
       "tag": "深度分析",
       "tag_type": "deep"
     },
@@ -38,7 +38,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://www.jgjcndrc.org.cn/detail?tId=1839225738396483585",
-      "published_at": "2026-11-19T22:37:04.466933+08:00",
+      "published_at": "2026-11-20T13:01:01.592876+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -48,7 +48,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://ncp.mysteel.com/a/26111609/B3EAB79BFF4E0FC7.html",
-      "published_at": "2026-11-19T22:37:04.466941+08:00",
+      "published_at": "2026-11-20T13:01:01.592884+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -58,47 +58,67 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://ncp.mysteel.com/a/26111609/AD32715F10AB76D5.html",
-      "published_at": "2026-11-19T22:37:04.466945+08:00",
+      "published_at": "2026-11-20T13:01:01.592890+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "223c62f0893a8b5f",
-      "title": "Mysteel早报：新签表现一般 预计今日玉米淀粉市场行情窄幅调整（20261119）",
+      "id": "8d7376c2810180a4",
+      "title": "Mysteel早报：预计今日小麦淀粉价格坚挺运行（20261120）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111909/C296E78A5EBA37DC.html",
-      "published_at": "2026-11-19T22:37:04.466990+08:00",
+      "url": "https://ncp.mysteel.com/a/26112010/6AB43AF14D93067F.html",
+      "published_at": "2026-11-20T13:01:01.592936+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "af667285e83a76ca",
-      "title": "Mysteel早报：华北市场豆粕价格预计下调（20261119）",
+      "id": "a31af93ee6bdc2a4",
+      "title": "Mysteel早报：预计今日玉米淀粉市场价格窄幅偏弱调整（20261120）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111909/5B6F389D80EE9EA0.html",
-      "published_at": "2026-11-19T22:37:04.466996+08:00",
+      "url": "https://ncp.mysteel.com/a/26112009/9918D98CE36C63E7.html",
+      "published_at": "2026-11-20T13:01:01.592941+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "819019e14b77a14f",
-      "title": "Mysteel早报：东北豆粕市场价格震荡（20261119）",
+      "id": "454aad73a58e36b7",
+      "title": "Mysteel早报：东北豆粕市场价格下跌（20261120）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111909/36A894F014DF3107.html",
-      "published_at": "2026-11-19T22:37:04.467000+08:00",
+      "url": "https://ncp.mysteel.com/a/26112009/EDBDEFFAAE566B11.html",
+      "published_at": "2026-11-20T13:01:01.592948+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "50d516e163fd4d4b",
-      "title": "Mysteel早报：棉粕市场价格预计持稳（20261119）",
+      "id": "82721e3fbab21e3f",
+      "title": "Mysteel早报：华北市场豆粕价格预计偏强运行（20261120）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111909/E2F84FACF83626AF.html",
-      "published_at": "2026-11-19T22:37:04.467004+08:00",
+      "url": "https://ncp.mysteel.com/a/26112009/9B15EC577C2BB80A.html",
+      "published_at": "2026-11-20T13:01:01.592953+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "98db6f1b12b55e57",
+      "title": "Mysteel早报：广西及云贵市场豆粕现货价格下跌（20261120）",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112009/587A923ACAB069CE.html",
+      "published_at": "2026-11-20T13:01:01.592958+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "21dafdc166dac3e9",
+      "title": "Mysteel早报：棉粕市场价格预计持稳运行（20261120）",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112009/8C4A1D76DCF251E1.html",
+      "published_at": "2026-11-20T13:01:01.592963+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -108,7 +128,7 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://ncp.mysteel.com/a/26111815/F5080921A947654A.html",
-      "published_at": "2026-11-19T22:37:04.467018+08:00",
+      "published_at": "2026-11-20T13:01:01.592978+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -118,29 +138,9 @@
       "source": "mysteel",
       "source_name": "Mysteel",
       "url": "https://ncp.mysteel.com/a/26111715/58C792A075FA056A.html",
-      "published_at": "2026-11-19T22:37:04.467025+08:00",
+      "published_at": "2026-11-20T13:01:01.592983+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
-    },
-    {
-      "id": "e89985153d63c833",
-      "title": "Mysteel：白羽肉鸡行情速览（20261119）",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111918/99C9046A91B8ED9E.html",
-      "published_at": "2026-11-19T22:37:04.467045+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "4904d236facb027c",
-      "title": "Mysteel日报：全国菜粕市场价格日报（20261119）",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://ncp.mysteel.com/a/26111917/D999F53423E956D0.html",
-      "published_at": "2026-11-19T22:37:04.467053+08:00",
-      "tag": "产区动态",
-      "tag_type": "dynamics"
     },
     {
       "id": "526a3481620c1556",
@@ -148,17 +148,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45978062.html",
-      "published_at": "2026-11-19T22:37:06.908490+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "91f7e00843898f7f",
-      "title": "大蒜月评：10月份供过于求矛盾激烈，产地蒜价下跌（2026年10月）",
-      "source": "sci99",
-      "source_name": "卓创资讯",
-      "url": "https://primagri.sci99.com/info/45879353.html",
-      "published_at": "2026-11-19T22:37:06.908514+08:00",
+      "published_at": "2026-11-20T13:01:03.161627+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -168,7 +158,17 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46000034.html",
-      "published_at": "2026-11-19T22:37:06.908519+08:00",
+      "published_at": "2026-11-20T13:01:03.161649+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "91f7e00843898f7f",
+      "title": "大蒜月评：10月份供过于求矛盾激烈，产地蒜价下跌（2026年10月）",
+      "source": "sci99",
+      "source_name": "卓创资讯",
+      "url": "https://primagri.sci99.com/info/45879353.html",
+      "published_at": "2026-11-20T13:01:03.161659+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -178,7 +178,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45573359.html",
-      "published_at": "2026-11-19T22:37:06.908525+08:00",
+      "published_at": "2026-11-20T13:01:03.161665+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -188,7 +188,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46034769.html",
-      "published_at": "2026-11-19T22:37:06.908529+08:00",
+      "published_at": "2026-11-20T13:01:03.161670+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -198,7 +198,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46035093.html",
-      "published_at": "2026-11-19T22:37:06.908532+08:00",
+      "published_at": "2026-11-20T13:01:03.161675+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -208,7 +208,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46034645.html",
-      "published_at": "2026-11-19T22:37:06.908536+08:00",
+      "published_at": "2026-11-20T13:01:03.161680+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -218,7 +218,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46030378.html",
-      "published_at": "2026-11-19T22:37:06.908541+08:00",
+      "published_at": "2026-11-20T13:01:03.161688+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -228,7 +228,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46025731.html",
-      "published_at": "2026-11-19T22:37:06.908544+08:00",
+      "published_at": "2026-11-20T13:01:03.161692+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -238,7 +238,7 @@
       "source": "agri",
       "source_name": "中国农业信息网",
       "url": "https://www.agri.cn./202610/t20261009_8875465.htm",
-      "published_at": "2026-11-19T22:37:09.399630+08:00",
+      "published_at": "2026-11-20T13:01:05.032898+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -248,7 +248,7 @@
       "source": "agri",
       "source_name": "中国农业信息网",
       "url": "https://www.agri.cn./202610/t20261009_8875291.htm",
-      "published_at": "2026-11-19T22:37:09.399648+08:00",
+      "published_at": "2026-11-20T13:01:05.032918+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -258,7 +258,7 @@
       "source": "agri",
       "source_name": "中国农业信息网",
       "url": "https://www.agri.cn./202606/t20260623_8847136.htm",
-      "published_at": "2026-11-19T22:37:09.399667+08:00",
+      "published_at": "2026-11-20T13:01:05.032942+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
