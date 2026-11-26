@@ -1,196 +1,146 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-26T14:03:42.220492+08:00",
+  "updated_at": "2026-11-27T01:12:35.161905+08:00",
   "items": [
     {
-      "id": "eefb4a228773a6ff",
-      "title": "11月12日莱芜市场大蒜价格行情",
+      "id": "f92e06077512c89c",
+      "title": "全国主产区玉米酒精企业利润估算指标注释说明",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/8C661D2E2AA82B0C.html",
-      "published_at": "2026-11-26T14:03:38.359746+08:00",
+      "url": "https://mfs.mysteelcdn.com/group1/M00/50/43/rBL632TkJIiAJdSKAALttdJCLyA929.pdf",
+      "published_at": "2026-11-27T01:12:31.646256+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "cc4aa83450fa06c2",
-      "title": "11月12日兰陵市场大蒜价格行情",
+      "id": "0865eed265469c29",
+      "title": "2025年度Mysteel稻米价格自我评估报告",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/4D8ABCB53AC7E908.html",
-      "published_at": "2026-11-26T14:03:38.359764+08:00",
+      "url": "https://mfs.mysteelcdn.com/group1/M00/18/22/rBL64GnLLmCAP9ubAAKwiPN2RQU382.pdf",
+      "published_at": "2026-11-27T01:12:31.646280+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "1d940a0175ef42c9",
-      "title": "11月12日邳州市场大蒜价格行情",
+      "id": "ef26065421952de7",
+      "title": "国家发改委&上海钢联：大宗工业原材料、能源及农产品价格周报（6月22日-6月26日）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/CC4B8366E6C75CC0.html",
-      "published_at": "2026-11-26T14:03:38.359769+08:00",
+      "url": "https://www.jgjcndrc.org.cn/detail?clmId=1834875465901326337&tId=2071528640115425281",
+      "published_at": "2026-11-27T01:12:31.646295+08:00",
+      "tag": "深度分析",
+      "tag_type": "deep"
+    },
+    {
+      "id": "4e29a980648f20e1",
+      "title": "国家发改委&上海钢联联合发布大宗商品价格指数",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://www.jgjcndrc.org.cn/detail?tId=1839225738396483585",
+      "published_at": "2026-11-27T01:12:31.646301+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "862d482d519424e7",
-      "title": "11月12日中牟市场大蒜价格行情",
+      "id": "06e043746cfa8e57",
+      "title": "Mysteel解读：本周农副加工产品价格报告（11.13-11.20）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/D58781E69BCCCB41.html",
-      "published_at": "2026-11-26T14:03:38.359777+08:00",
+      "url": "https://ncp.mysteel.com/a/26112309/2FA1BCC751EA4DC9.html",
+      "published_at": "2026-11-27T01:12:31.646309+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "11bd8199c7ae8f6a",
-      "title": "11月12日杞县市场大蒜价格行情",
+      "id": "2643bf161a6f8a85",
+      "title": "Mysteel解读：本周畜牧产品价格报告（11.13-11.20）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/DAEC5765D6635FC0.html",
-      "published_at": "2026-11-26T14:03:38.359780+08:00",
+      "url": "https://ncp.mysteel.com/a/26112308/617039E7600CCC5B.html",
+      "published_at": "2026-11-27T01:12:31.646315+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "2be1c3011b362f10",
-      "title": "11月12日金乡市场大蒜价格行情",
+      "id": "e6e99eb02c4c8520",
+      "title": "Mysteel早报：大蒜市场早间提示（20261126）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111211/9ABA4F62A132B6F5.html",
-      "published_at": "2026-11-26T14:03:38.359786+08:00",
+      "url": "https://ncp.mysteel.com/a/26112609/AAB3A7463E7C6D30.html",
+      "published_at": "2026-11-27T01:12:31.646378+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "bd580844893c5c58",
-      "title": "11月11日莱芜市场大蒜价格行情",
+      "id": "a8cb31ddb19d2e84",
+      "title": "Mysteel早报：氨基酸价格偏稳震荡 关注企业最新报价（20261126）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111113/AD45EA509A0ED1B2.html",
-      "published_at": "2026-11-26T14:03:38.359789+08:00",
+      "url": "https://ncp.mysteel.com/a/26112608/4CF424519B2C72E5.html",
+      "published_at": "2026-11-27T01:12:31.646387+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "cd9d22ae6de90be8",
-      "title": "11月11日兰陵市场大蒜价格行情",
+      "id": "94db9d594a3821f7",
+      "title": "美棉出口周报:新年度美棉订单延续偏弱，国别流向分化",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111113/A67218C8D5025831.html",
-      "published_at": "2026-11-26T14:03:38.359792+08:00",
+      "url": "https://ncp.mysteel.com/a/26112511/91994A380DD5ED55.html",
+      "published_at": "2026-11-27T01:12:31.646410+08:00",
+      "tag": "深度分析",
+      "tag_type": "deep"
+    },
+    {
+      "id": "1de5adb49975b2dc",
+      "title": "Mysteel日报：国产大豆现货交易平淡（20261126）",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112618/106B701D7D69F43D.html",
+      "published_at": "2026-11-27T01:12:31.646423+08:00",
+      "tag": "产区动态",
+      "tag_type": "dynamics"
+    },
+    {
+      "id": "b1a81a3fa09a70da",
+      "title": "Mysteel日报：全国菜粕市场价格日报（20261126）",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112617/5556B55FEF143FC9.html",
+      "published_at": "2026-11-27T01:12:31.646429+08:00",
+      "tag": "产区动态",
+      "tag_type": "dynamics"
+    },
+    {
+      "id": "8a4b6a3353fe65d1",
+      "title": "Mysteel日报：全国主要油厂菜油成交统计(20261126)",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112617/42B8FCE48822EF19.html",
+      "published_at": "2026-11-27T01:12:31.646434+08:00",
+      "tag": "产区动态",
+      "tag_type": "dynamics"
+    },
+    {
+      "id": "8805f4d12ac0403f",
+      "title": "Mysteel：白羽肉鸡行情速览（20261126）",
+      "source": "mysteel",
+      "source_name": "Mysteel",
+      "url": "https://ncp.mysteel.com/a/26112617/52456E220F6C29DD.html",
+      "published_at": "2026-11-27T01:12:31.646439+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
     {
-      "id": "4659f1061db216d6",
-      "title": "11月11日邳州市场大蒜价格行情",
+      "id": "0b080e2f066e4be4",
+      "title": "Mysteel日报：鱼粉市场供需博弈持续 价格暂稳推进（20261126）",
       "source": "mysteel",
       "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111113/FAD0F91857E0D7E6.html",
-      "published_at": "2026-11-26T14:03:38.359796+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "c931e125da5b25c2",
-      "title": "11月11日中牟市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111113/B6691A133A1CBAA6.html",
-      "published_at": "2026-11-26T14:03:38.359799+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "0f37bb4de37db3cf",
-      "title": "11月11日杞县市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111111/1215585D41BB2539.html",
-      "published_at": "2026-11-26T14:03:38.359804+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "4b87b8e44795033a",
-      "title": "11月11日金乡市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111111/C10925C7184DFF5D.html",
-      "published_at": "2026-11-26T14:03:38.359807+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "54926b22b007fc50",
-      "title": "11月10日莱芜市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/5DBF226472D2881E.html",
-      "published_at": "2026-11-26T14:03:38.359810+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "008f7c44f3148d8f",
-      "title": "11月10日兰陵市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/5A170CDD0C4647E3.html",
-      "published_at": "2026-11-26T14:03:38.359813+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "5c2f4f678f174fbb",
-      "title": "11月10日中牟市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/654F72404499EDEC.html",
-      "published_at": "2026-11-26T14:03:38.359816+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "500d4fedb95a54c9",
-      "title": "11月10日杞县市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/EC6AF5E6EAB851EC.html",
-      "published_at": "2026-11-26T14:03:38.359819+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "f0ff0c16b8467a68",
-      "title": "11月10日邳州市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/93073CCB132131D0.html",
-      "published_at": "2026-11-26T14:03:38.359822+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "28485765f4072b8f",
-      "title": "11月10日金乡市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26111010/8743FA57913F8F1D.html",
-      "published_at": "2026-11-26T14:03:38.359825+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
-    },
-    {
-      "id": "0966d171cfeb2993",
-      "title": "11月9日莱芜市场大蒜价格行情",
-      "source": "mysteel",
-      "source_name": "Mysteel",
-      "url": "https://guoshu.mysteel.com/dasuan/m/26110910/53CFF392D51F1929.html",
-      "published_at": "2026-11-26T14:03:38.359829+08:00",
-      "tag": "行情分析",
-      "tag_type": "analysis"
+      "url": "https://ncp.mysteel.com/a/26112617/5CC0FDD6D96D287C.html",
+      "published_at": "2026-11-27T01:12:31.646446+08:00",
+      "tag": "产区动态",
+      "tag_type": "dynamics"
     },
     {
       "id": "9689e5b05dbc367e",
@@ -198,7 +148,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46091173.html",
-      "published_at": "2026-11-26T14:03:40.731940+08:00",
+      "published_at": "2026-11-27T01:12:33.285985+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -208,7 +158,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46077809.html",
-      "published_at": "2026-11-26T14:03:40.731960+08:00",
+      "published_at": "2026-11-27T01:12:33.286005+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -218,7 +168,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46056007.html",
-      "published_at": "2026-11-26T14:03:40.731964+08:00",
+      "published_at": "2026-11-27T01:12:33.286011+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -228,7 +178,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/45879353.html",
-      "published_at": "2026-11-26T14:03:40.731968+08:00",
+      "published_at": "2026-11-27T01:12:33.286016+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -238,7 +188,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46082652.html",
-      "published_at": "2026-11-26T14:03:40.731971+08:00",
+      "published_at": "2026-11-27T01:12:33.286021+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -248,7 +198,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46070692.html",
-      "published_at": "2026-11-26T14:03:40.731975+08:00",
+      "published_at": "2026-11-27T01:12:33.286026+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -258,7 +208,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46068619.html",
-      "published_at": "2026-11-26T14:03:40.731979+08:00",
+      "published_at": "2026-11-27T01:12:33.286034+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -268,7 +218,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46025731.html",
-      "published_at": "2026-11-26T14:03:40.731982+08:00",
+      "published_at": "2026-11-27T01:12:33.286038+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -278,7 +228,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/46000034.html",
-      "published_at": "2026-11-26T14:03:40.731986+08:00",
+      "published_at": "2026-11-27T01:12:33.286043+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -288,7 +238,7 @@
       "source": "sci99",
       "source_name": "卓创资讯",
       "url": "https://primagri.sci99.com/info/43811299.html",
-      "published_at": "2026-11-26T14:03:40.731990+08:00",
+      "published_at": "2026-11-27T01:12:33.286048+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     },
@@ -298,11 +248,31 @@
       "source": "agri",
       "source_name": "中国农业信息网",
       "url": "https://www.agri.cn./202610/t20261009_8875465.htm",
-      "published_at": "2026-11-26T14:03:42.220129+08:00",
+      "published_at": "2026-11-27T01:12:35.161452+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "888aee3c7827ba37",
+      "title": "中国大蒜年度供需平衡表详细版（2026年9月会商发布）",
+      "source": "agri",
+      "source_name": "中国农业信息网",
+      "url": "https://www.agri.cn./202610/t20261009_8875291.htm",
+      "published_at": "2026-11-27T01:12:35.161471+08:00",
+      "tag": "行情分析",
+      "tag_type": "analysis"
+    },
+    {
+      "id": "ab69da77efaf899a",
+      "title": "中国大蒜供需平衡表大众版（2026年6月会商发布）",
+      "source": "agri",
+      "source_name": "中国农业信息网",
+      "url": "https://www.agri.cn./202606/t20260623_8847136.htm",
+      "published_at": "2026-11-27T01:12:35.161494+08:00",
       "tag": "行情分析",
       "tag_type": "analysis"
     }
   ],
-  "total_count": 30,
+  "total_count": 27,
   "max_items": 30
 }
